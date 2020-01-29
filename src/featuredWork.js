@@ -2,24 +2,21 @@ import React from "react";
 
 class FeaturedWork extends React.Component {
     render() {
-        let myProps = this.props.pics;
+        let projectsImage = this.props.pics;
         console.log(typeof(this.props.pics))
-        // this.props.pics.map((pic) => {
-        //     return pic
-        // });
+       
         return (
             // <img src ="/image/project2.png"/>
            <ol className ='container-projects'>
-               {this.props.picsName.map(function(pic) {
+               {this.props.projectsPics.map(function(pic) {
                    console.log(pic.image);
-                   let imgsrc = myProps(pic.image);
-                   console.log(imgsrc);
-
+                   let oneImage = projectsImage(pic.image);
+                   console.log(oneImage);
 
                    return (
                    <li key={pic.image}>
                        <div className = 'box' style = {{
-                         backgroundImage: `url(${imgsrc})`
+                         backgroundImage: `url(${oneImage})`
                        }}/>
                        
                    </li>
