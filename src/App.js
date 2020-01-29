@@ -16,19 +16,24 @@ class App extends Component {
     // console.log(onePic);
     return (
       <div>
+        <main className="main-content">
       <div>
         <ProjectsPresentation/>
       </div>
+      </main>
+      <article className="project-descripion">
       <div>
         <ProjectsWebTechnologies/>
       </div>
+      </article>
+      <nav className="menu">
       <div>
         {/* <img src = {onePic} alt = 'kura'/> */}
         <FeaturedWork projectsPics= {data.images} pics={images}/>
       </div>
+      </nav>
       </div>
-    )    
-    
+    )       
   }
 }
 
