@@ -15,11 +15,13 @@ body {
 } */
 
 .container-projects {
-  list-style-type: none;
+  /* display: flex; */
 }
 
 .box {
   width: 100%;
-  height: 100px;
-  /* color: #2d3c49; */
+  height: 40%;
+  float: left;
+  padding: 10px;
+  /* flex: 33.3%; */
 }
