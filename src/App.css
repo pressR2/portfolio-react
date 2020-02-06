@@ -24,6 +24,7 @@ body {
 
 .post-slider {
   border: 1px solid red;
+  position: relative;
 }
 
 .post-slider .post-wrapper {
@@ -41,3 +42,25 @@ body {
   height: 350px;
   /* margin: 0px 10px; */
 }
+
+.icon-previous {
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  font-size: 2em;
+  cursor: pointer;
+  fill: #006669;
+}
+
+.icon-next {
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  font-size: 2em;
+  cursor: pointer;
+  fill: #006669;
+}
+
+
