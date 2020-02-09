@@ -9,10 +9,22 @@ import ProjectsPresentation from "./projectsPresentation";
 const images = require.context("../image", true);
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.selectProject = this.selectProject.bind(this);
+  }
+
+  state = {
+    projectWebIcons:[]
+  };
+
+  selectProject(project) {
+    this.setState({
+      projectWebIcons: project.webIcons
+    });
+  }
+
   render() {
-    // console.log(images);
-    // const onePic = images('./project2.png');
-    // console.log(onePic);
     return (
       <div>
         <main className="main-content">
@@ -22,12 +34,12 @@ class App extends Component {
         </main>
         <article className="project-descripion">
           <div>
-            <ProjectsWebTechnologies />
+            <ProjectsWebTechnologies webTechnologies={this.state.projectWebIcons}/>
           </div>
         </article>
         <nav className="menu">
           <div>
-            <FeaturedWork projectsPics={data.images} pics={images} />
+            <FeaturedWork projects={data.projects} pics={images} selectProject={this.selectProject}/>
           </div>
         </nav>
       </div>

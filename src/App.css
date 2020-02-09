@@ -1,3 +1,4 @@
+@import url('https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css');
 body,
 html {
   margin: 0;
@@ -29,10 +30,11 @@ body {
 
 .post-slider .post-wrapper {
   border: 1px dashed red;
-  width: 84%;
-  height: 350px;
+  width: 83%;
+  height: 360px;
   margin: 0px auto;
   overflow: hidden;
+  padding: 10px 0px 10px 0px;
 }
 
 .post-slider .post-wrapper .post {
@@ -40,6 +42,10 @@ body {
   max-width: 95%;
   display: inline-block;
   height: 350px;
+  border-radius: 5px;
+  box-shadow: 2px 11px 18px 0px  black;
+  /* padding: 10px 0px 10px 0px; */
+  /* #A0A0A033; */
   /* margin: 0px 10px; */
 }
 
@@ -63,4 +69,11 @@ body {
   fill: #006669;
 }
 
+.project-descripion {
+  border: 1px solid red;
+}
+
+.icon {
+  color: #60be86;
+}
 

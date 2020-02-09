@@ -20,6 +20,7 @@ class FeaturedWork extends React.Component {
       }
 
   render() {
+    let selectProject = this.props.selectProject;
     let projectsImage = this.props.pics;
     var settings = {
     //   dots: true,
@@ -34,16 +35,19 @@ class FeaturedWork extends React.Component {
           <Leftchevron/>
         </div>
         <div className="icon-next" onClick={this.next}>
-          <Rightchevron/>  
+          <Rightchevron/>
         </div>
         <div className="post-wrapper">
           <Slider ref={c => (this.slider = c)} {...settings}>
-            {this.props.projectsPics.map(function(pic) {
-              console.log(pic.image);
-              let oneImage = projectsImage(pic.image);
-              console.log(oneImage);
-
-              return <img className="post" key={pic.image} src={oneImage} alt=""></img>;
+            {this.props.projects.map(function(project) {
+              let oneImage = projectsImage(project.image);
+    
+              return <img className="post" key={project.image} src={oneImage} alt=""  onClick={(function(project) {
+                return function() {
+                    selectProject(project);
+                };
+            })(project)}>
+            </img>;
             })}
           </Slider>
         </div>

@@ -1,22 +1,30 @@
-{"images":[
-    {
+{"projects":[
+    {   "webIcons": [],
+        "image": "./About-me.PNG"
+    },
+    {   "webIcons": ["<i class=\"devicon-html5-plain\" class=\"icon\"></i>", "<i class=\"devicon-css3-plain\"></i>"],
         "image": "./project1.JPG"
       
     },
-    {
+    {    "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>"],
         "image": "./project2.png"
      
     },
-    {
+    {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>", 
+                     "<i class=\"devicon-jquery-plain-wordmark\"></i>"],
         "image": "./project3.png"
 
     },
-    {
-        "image": "./waterfall2.JPG"
+    {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>"],
+        "image": "./Res-app.png"
 
     },
-    {
+    {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>"],
         "image": "./ArcadeGame3.PNG"
 
+    },
+    {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>"],
+        "image": "./myReads.png"
     }
+    
 ]}
