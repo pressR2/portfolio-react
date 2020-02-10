@@ -4,7 +4,6 @@ import FeaturedWork from "./featuredWork";
 import * as data from "./date.json";
 import ProjectsWebTechnologies from "./projectsWebTechnologies";
 import ProjectsPresentation from "./projectsPresentation";
-// import  Leftchevron from './logo1';
 
 const images = require.context("../image", true);
 
@@ -15,18 +14,21 @@ class App extends Component {
   }
 
   state = {
-    projectWebIcons:[]
+    projectWebIcons: [],
+    projectDescription: ""
   };
 
   selectProject(project) {
     this.setState({
-      projectWebIcons: project.webIcons
+      projectWebIcons: project.webIcons,
+      projectDescription: project.description
     });
   }
 
+
   render() {
     return (
-      <div>
+      <div className="main">
         <main className="main-content">
           <div>
             <ProjectsPresentation />
@@ -34,14 +36,25 @@ class App extends Component {
         </main>
         <article className="project-descripion">
           <div>
-            <ProjectsWebTechnologies webTechnologies={this.state.projectWebIcons}/>
+            <ProjectsWebTechnologies
+              webTechnologies={this.state.projectWebIcons}
+              selectDescription={this.state.projectDescription}
+            />
           </div>
         </article>
         <nav className="menu">
           <div>
-            <FeaturedWork projects={data.projects} pics={images} selectProject={this.selectProject}/>
+            <FeaturedWork
+              projects={data.projects}
+              pics={images}
+              selectProject={this.selectProject}
+              
+            />
           </div>
         </nav>
+        <footer className="footer">
+          <p className="footer p">photos by Marta</p>
+        </footer>
       </div>
     );
   }
