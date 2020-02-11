@@ -15,9 +15,16 @@ body {
   height: 100vh;
 }
 
+.flex-content {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: row;
+  align-items: stretch;
+}
+
 .main-content {
   width: 65%;
-  height: 780px;
+  height: 70%;
   border: 1px solid red;
   margin-left: 10px;
   margin-bottom: 20px;
@@ -25,13 +32,19 @@ body {
 
 .project-descripion {
   border: 1px solid red;
-  height: 263px;
+  /* height: 20%; */
   width: 65%;
   margin-left: 10px;
 }
 
 
 /*POST SLIDER*/
+.menu {
+  width: 15%;
+  /* position: relative; */
+  /* right: 0; */
+  /* top: 0; */
+}
 
 .post-slider {
   border: 1px solid red;
@@ -39,13 +52,14 @@ body {
   width: 33%;
   top: 0;
   right: 0;
+  height: 85%;
   /* height: 1070px; */
 }
 
 .post-slider .post-wrapper {
   border: 1px dashed red;
-  width: 75%;
-  /* height: 1063px; */
+  width: 50%;
+  height: 100%;
   margin: 0px auto;
   overflow: hidden;
   /* float: right; */
@@ -54,26 +68,47 @@ body {
 
 .post-slider .post-wrapper .post {
   /* background: blue; */
-  max-width: 100%;
+  /* max-width: 100%; */
   display: inline-block;
-  height: 350px;
+  /* height: 250px; */
   border-radius: 5px;
   /* box-shadow: 2px 11px 18px 0px  black; */
 
   /* padding: 10px 0px 10px 0px; */
   /* #A0A0A033; */
-  /* margin: 0px 10px; */
+  margin: 10px 0 10px 0;
 }
 
 /* img {
   max-width: 50%;
 } */
 
+/* .post-slider .post-wrapper .animate {
+    transform: translate3d(0,0,0);
+    perspective: 1000;
+    filter: blur(0);
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transform-origin: center left;
+}
+
+.animate--shrink {
+  animation-duration: 1s;
+  animation-name: shrink;
+  animation-timing-function: 'linear';
+}
+
+.animate--grow {
+  animation-duration: 1s;
+  animation-timing-function: 'linear';
+  animation-name: grow;
+} */
+
 .icon-previous {
   width: 30px;
   position: absolute;
   top: 50%;
-  left: 30px;
+  left: 70px;
   font-size: 2em;
   cursor: pointer;
   fill: #006669;
@@ -83,13 +118,17 @@ body {
   width: 30px;
   position: absolute;
   top: 50%;
-  right: 30px;
+  right: 70px;
   font-size: 2em;
   cursor: pointer;
   fill: #006669;
 }
 
 /* PROJECT DESCRIPTION*/
+.main-wrapper {
+  height: 95%;
+  width: 80%;
+}
 
 .icon {
   color: #60be86;
@@ -118,10 +157,12 @@ body {
 
 .footer {
   width: 100%;
-  /* height: 25px; */
+  /* height: 2%; */
   color: #7d97ad;
   text-align: center;
   font-size: 13px;
   border: none;
   background-color: #2d3c49;
+  position: absolute;
+  bottom: 0;
 }

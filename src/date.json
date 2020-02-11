@@ -9,7 +9,7 @@
     },
     {    "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>"],
         "image": "./project2.png",
-        "description": "<div><h1>Pixel Art Maker</h1><p>Single-page app where the user can create artistic designs.</p></div>"
+        "description": "<div><h1>Pixel Art Maker</h1><p>A single-page app where the user can create artistic designs.</p></div>"
     },
     {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>", 
                      "<i class=\"devicon-jquery-plain-wordmark\"></i>"],
@@ -18,11 +18,11 @@
     },
     {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>"],
         "image": "./Res-app.png",
-        "description": "<div><h1>Restaurant Reviews App</h1><p>Fully responsive web application with accessibility standards.This app also caches some assets for offline use.</p></div>"
+        "description": "<div><h1>Restaurant Reviews App</h1><p>Fully responsive web application with accessibility standards. This app also caches some assets for offline use.</p></div>"
     },
     {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>"],
         "image": "./ArcadeGame3.PNG",
-        "description": "<div><h1>Classic Arcade Game Clone</h1><p>A frooger clone game on canvas, with keyboard input and is implemented using JavaScript object-oriented programming features.</p></div>"
+        "description": "<div><h1>Classic Arcade Game Clone</h1><p>A frogger clone game on canvas, with keyboard input and is implemented using JavaScript object-oriented programming features.</p></div>"
     },
     {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>","<i class=\"devicon-react-original\"></i>"],
         "image": "./myReads.png",

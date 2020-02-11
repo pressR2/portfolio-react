@@ -24,11 +24,14 @@ class FeaturedWork extends React.Component {
     let projectsImage = this.props.pics;
     var settings = {
       //   dots: true,
-      slidesToShow: 2,
+      slidesToShow: 3,
       slidesToScroll: 1,
       vertical: true
-      //   autoplay: true,
-      //   autoplaySpeed: 2000,
+    //   waitForAnimate: true
+    //   focusOnSelect: true
+    //   centerMode: true,
+    //   centerPadding: '60px',
+      
     };
     return (
       <div className="post-slider">
@@ -45,7 +48,7 @@ class FeaturedWork extends React.Component {
 
               return (
                 <img
-                  className="post"
+                  className="post animate"
                   key={project.image}
                   src={oneImage}
                   alt=""

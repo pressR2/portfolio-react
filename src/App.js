@@ -29,29 +29,34 @@ class App extends Component {
   render() {
     return (
       <div className="main">
-        <main className="main-content">
-          <div>
-            <ProjectsPresentation />
+        <div className="flex-content">
+          <div className="main-wrapper">
+            <main className="main-content">
+              <div>
+                <ProjectsPresentation />
+                {/* <img src="./project1.JPG" alt=""></img> */}
+              </div>
+            </main>
+            <article className="project-descripion">
+              <div>
+                <ProjectsWebTechnologies
+                  webTechnologies={this.state.projectWebIcons}
+                  selectDescription={this.state.projectDescription}
+                />
+              </div>
+            </article>
           </div>
-        </main>
-        <article className="project-descripion">
-          <div>
-            <ProjectsWebTechnologies
-              webTechnologies={this.state.projectWebIcons}
-              selectDescription={this.state.projectDescription}
-            />
-          </div>
-        </article>
-        <nav className="menu">
-          <div>
-            <FeaturedWork
-              projects={data.projects}
-              pics={images}
-              selectProject={this.selectProject}
-              
-            />
-          </div>
-        </nav>
+          <nav className="menu">
+            <div>
+              <FeaturedWork
+                projects={data.projects}
+                pics={images}
+                selectProject={this.selectProject}
+                
+              />
+            </div>
+          </nav>
+        </div>
         <footer className="footer">
           <p className="footer p">photos by Marta</p>
         </footer>
