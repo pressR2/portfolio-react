@@ -15,13 +15,15 @@ class App extends Component {
 
   state = {
     projectWebIcons: [],
-    projectDescription: ""
+    projectDescription: "",
+    projectVideo: ""
   };
 
   selectProject(project) {
     this.setState({
       projectWebIcons: project.webIcons,
-      projectDescription: project.description
+      projectDescription: project.description,
+      projectVideo: project.video
     });
   }
 
@@ -33,8 +35,9 @@ class App extends Component {
           <div className="main-wrapper">
             <main className="main-content">
               <div>
-                <ProjectsPresentation />
-                {/* <img src="./project1.JPG" alt=""></img> */}
+                <ProjectsPresentation 
+                  selectVideo={this.state.projectVideo}
+                />
               </div>
             </main>
             <article className="project-descripion">

@@ -1,40 +1,49 @@
 {"projects":[
     {   "webIcons": [],
         "image": "./About-me.PNG",
-        "description": "<p>\"\"</p>"
+        "description": "<p>\"\"</p>",
+        "video": "HB0w4aiD5IY"
     },
     {   "webIcons": ["<i class=\"devicon-html5-plain\" class=\"icon\"></i>", "<i class=\"devicon-css3-plain\"></i>"],
         "image": "./project1.JPG",
-        "description": "<div><h1>Animal Trading Card</h1><p>Simple functional webpage translated from a design prototype.</p></div>"
+        "description": "<div><h1>Animal Trading Card</h1><p>Simple functional webpage translated from a design prototype.</p></div>",
+        "video": "HB0w4aiD5IY"
     },
     {    "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>"],
         "image": "./project2.png",
-        "description": "<div><h1>Pixel Art Maker</h1><p>A single-page app where the user can create artistic designs.</p></div>"
+        "description": "<div><h1>Pixel Art Maker</h1><p>A single-page app where the user can create artistic designs.</p></div>",
+        "video": "HB0w4aiD5IY"
     },
     {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>", 
                      "<i class=\"devicon-jquery-plain-wordmark\"></i>"],
         "image": "./project3.png",
-        "description": "<div><h1>Memory Game</h1><p>Complete browser-based card matching game.</p></div>"
+        "description": "<div><h1>Memory Game</h1><p>Complete browser-based card matching game.</p></div>",
+        "video": "HB0w4aiD5IY"
     },
     {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>"],
         "image": "./Res-app.png",
-        "description": "<div><h1>Restaurant Reviews App</h1><p>Fully responsive web application with accessibility standards. This app also caches some assets for offline use.</p></div>"
+        "description": "<div><h1>Restaurant Reviews App</h1><p>Fully responsive web application with accessibility standards. This app also caches some assets for offline use.</p></div>",
+        "video": "HB0w4aiD5IY"
     },
     {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>"],
         "image": "./ArcadeGame3.PNG",
-        "description": "<div><h1>Classic Arcade Game Clone</h1><p>A frogger clone game on canvas, with keyboard input and is implemented using JavaScript object-oriented programming features.</p></div>"
+        "description": "<div><h1>Classic Arcade Game Clone</h1><p>A frogger clone game on canvas, with keyboard input and is implemented using JavaScript object-oriented programming features.</p></div>",
+        "video": "HB0w4aiD5IY"
     },
     {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>","<i class=\"devicon-react-original\"></i>"],
         "image": "./myReads.png",
-        "description": "<div><h1>MyReads: A Book Tracking App</h1><p>A web application that allows to select and categorize books user have read, are currently reading, or want to read.</p></div>"
+        "description": "<div><h1>MyReads: A Book Tracking App</h1><p>A web application that allows to select and categorize books user have read, are currently reading, or want to read.</p></div>",
+        "video": "HB0w4aiD5IY"
     },
     {   "webIcons": ["<i class=\"devicon-html5-plain\" class=\"icon\"></i>", "<i class=\"devicon-css3-plain\"></i>","<i class=\"devicon-javascript-plain\"></i>","<i class=\"devicon-jasmine-plain\"></i>"],
         "image": "./FeedReader testing.png",
-        "description": "<div><h1>Feed Reader Testing</h1><p>A web-based application that loads and displays RSS feeds.</p></div>"
+        "description": "<div><h1>Feed Reader Testing</h1><p>A web-based application that loads and displays RSS feeds.</p></div>",
+        "video": "HB0w4aiD5IY"
     },
     {   "webIcons": ["<i class=\"devicon-html5-plain\"></i>", "<i class=\"devicon-css3-plain\"></i>", "<i class=\"devicon-javascript-plain\"></i>","<i class=\"devicon-react-original\"></i>"],
         "image": "./Neighborhood.png",
-        "description": "<div><h1>Neighborhood Map</h1><p>A single page map application uses the Google Maps API. Integrates a third-party data API with accessibility standards and some usability offline.</p></div>"
+        "description": "<div><h1>Neighborhood Map</h1><p>A single page map application uses the Google Maps API. Integrates a third-party data API with accessibility standards and some usability offline.</p></div>",
+        "video": "HB0w4aiD5IY"
 
     }
 

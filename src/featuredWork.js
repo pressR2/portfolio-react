@@ -48,7 +48,7 @@ class FeaturedWork extends React.Component {
 
               return (
                 <img
-                  className="post animate"
+                  className="post"
                   key={project.image}
                   src={oneImage}
                   alt=""
