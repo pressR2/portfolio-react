@@ -33,16 +33,16 @@ iframe {
   width: 65%;
   /* height: 70%; */
   /* border: 1px solid red; */
-  margin-left: 80px;
+  margin-left: 290px; /*do poprawy*/
   margin-bottom: 23px;
-  margin-top: 65px;
+  margin-top: 69px;
 }
 
 .project-descripion {
-  border: 1.5px solid #fc8b49;
+  /* border: 1.5px solid #fc8b49; */
   /* height: 42%; */
   width: 65%;
-  margin-left: 80px;
+  margin-left: 290px; /*do poprawy*/
   background-color: #1a2e36;
   border-bottom-right-radius: 100px;
 }
@@ -57,29 +57,29 @@ iframe {
 }
 
 .post-slider {
-  border: 1.5px solid #fc8b49;
+  /* border: 1.5px solid #fc8b49; */
   position: absolute;
-  width: 22%;
+  width: 18%;
   top: 0;
   right: 0;
   /* display: flex; */
   /* flex-wrap: wrap; */
   /* flex-direction: row; */
-  margin-right: 40px;
-  margin-top: 20px;
+  margin-right: 273px; /*do poprawy*/
+  margin-top: 25px;
   display: block;
 }
 
 .post-slider .post-wrapper {
   /* border: 1px dashed red; */
-  width: 74%;
+  width: 90%;
   /* height: 80%; */
   margin: 0px auto;
   overflow: hidden;
   /* float: right; */
   /* padding: 10px 0px 10px 0px; */
   display: block;
-  margin-top: 35px;
+  margin-top: 45px;
   margin-bottom: 35px;
 
 }
@@ -103,8 +103,8 @@ iframe {
 .icon-previous {
   width: 35px;
   position: absolute;
-  top: 0;
-  left: 45%;
+  top: 11px;
+  left: 43%;
   font-size: 2em;
   cursor: pointer;
   fill: #60be86;
@@ -118,8 +118,8 @@ iframe {
 .icon-next {
   width: 35px;
   position: absolute;
-  bottom: 0;
-  left: 45%;
+  bottom: 8px;
+  left: 43%;
   /* top: 50%;
   right: 50px; */
   font-size: 2em;
