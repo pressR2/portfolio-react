@@ -9,7 +9,7 @@ html {
 
 body {
   font-family: "Hind Madurai", sans-serif;
-  background-color: #7b878b;
+  background-color: #717e82;
 }
 
 .main {
@@ -33,17 +33,17 @@ iframe {
   width: 65%;
   /* height: 70%; */
   /* border: 1px solid red; */
-  margin-left: 50px;
-  margin-bottom: 20px;
-  margin-top: 70px;
+  margin-left: 80px;
+  margin-bottom: 23px;
+  margin-top: 65px;
 }
 
 .project-descripion {
   border: 1.5px solid #fc8b49;
   /* height: 42%; */
   width: 65%;
-  margin-left: 50px;
-  background-color: #1D353E;
+  margin-left: 80px;
+  background-color: #1a2e36;
   border-bottom-right-radius: 100px;
 }
 
@@ -72,7 +72,6 @@ iframe {
 .post-slider .post-wrapper {
   /* border: 1px dashed red; */
   width: 60%;
-  /* height: 100%; */
   margin: 0px auto;
   overflow: hidden;
   /* float: right; */
@@ -80,15 +79,12 @@ iframe {
 }
 
 .post-slider .post-wrapper .post {
-  /* background: blue; */
   /* max-width: 100%; */
   display: inline-block;
   /* height: 250px; */
   border-radius: 5px;
   /* box-shadow: 2px 11px 18px 0px  black; */
-
   /* padding: 10px 0px 10px 0px; */
-  /* #A0A0A033; */
   margin: 10px 0 10px 0;
 }
 

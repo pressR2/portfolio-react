@@ -30,29 +30,27 @@ class App extends Component {
 
   render() {
     return (
-      <div className="wrapper">
+      <div className="main">
         <MetaTags>
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
         </MetaTags>
-        <div className="main">
+      
           <div className="flex-content">
             <div className="main-wrapper">
               <main className="main-content">
-                <div>
+        
                   <ProjectsPresentation selectVideo={this.state.projectVideo} />
-                </div>
+              
               </main>
-              <article className="project-descripion">
-                <div>
+              
                   <ProjectsWebTechnologies
                     webTechnologies={this.state.projectWebIcons}
                     selectDescription={this.state.projectDescription}
                   />
-                </div>
-              </article>
+
             </div>
             <nav className="menu">
               <div>
@@ -67,7 +65,7 @@ class App extends Component {
           <footer className="footer">
             <p className="footer p">photos by Marta</p>
           </footer>
-        </div>
+        
       </div>
     );
   }

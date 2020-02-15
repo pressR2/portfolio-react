@@ -4,8 +4,8 @@ import YouTube from 'react-youtube';
 class ProjectsPresentation extends React.Component {
     render() {
         const opts ={
-            height: '600',
-            width: '1200',
+            height: '511',
+            width: '1022',
             playerVars: {rel: 0}
         }
         return (

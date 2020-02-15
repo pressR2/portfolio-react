@@ -5,7 +5,7 @@ class ProjectsWebTechnologies extends React.Component {
     // console.log(this.props.selectDescription)
     return (
      
-        <div>
+    <article className="project-descripion">
       <div>
         {this.props.webTechnologies.map(function(icons) {
           console.log(icons);
@@ -13,19 +13,16 @@ class ProjectsWebTechnologies extends React.Component {
             <div
               className="icon"
               key={icons}
-              dangerouslySetInnerHTML={{ __html: icons }}
-            ></div>
+              
+            ><i className={icons}></i></div>
           );
         })}
       </div>
      
-        <div>
-            <div
-            className="description"
-            dangerouslySetInnerHTML={{ __html: this.props.selectDescription }}
-            ></div>          
-        </div>
-        </div>
+    <div
+        className="description"
+        ><h1>{this.props.selectDescription[0]}</h1><p>{this.props.selectDescription[1]}</p></div>          
+   </article>
         
     );
   }
