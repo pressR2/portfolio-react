@@ -2,8 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Leftchevron from "./logo1";
-import Rightchevron from "./logo2";
+import Chevron from "./chevron";
 
 class FeaturedWork extends React.Component {
   constructor(props) {
@@ -27,21 +26,18 @@ class FeaturedWork extends React.Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       vertical: true
-    //   waitForAnimate: true
-    //   focusOnSelect: true
-    //   centerMode: true,
-    //   centerPadding: '60px',
-      
+      //   waitForAnimate: true
+      //   focusOnSelect: true
+      //   centerMode: true,
+      //   centerPadding: '60px',
     };
     return (
       <div className="post-slider">
-        <div className="icon-previous" onClick={this.previous}>
-          <Leftchevron />
-        </div>
-        <div className="icon-next" onClick={this.next}>
-          <Rightchevron />
-        </div>
         <div className="post-wrapper">
+          <div className="icon-previous" onClick={this.previous}>
+            <Chevron />
+          </div>
+
           <Slider ref={c => (this.slider = c)} {...settings}>
             {this.props.projects.map(function(project) {
               let oneImage = projectsImage(project.image);
@@ -61,6 +57,9 @@ class FeaturedWork extends React.Component {
               );
             })}
           </Slider>
+          <div className="icon-next" onClick={this.next}>
+            <Chevron />
+          </div>
         </div>
       </div>
     );
