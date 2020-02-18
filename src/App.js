@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import "./App-responsive.css";
 import FeaturedWork from "./featuredWork";
 import * as data from "./date.json";
 import ProjectsWebTechnologies from "./projectsWebTechnologies";
@@ -37,35 +38,31 @@ class App extends Component {
             content="width=device-width, initial-scale=1.0"
           />
         </MetaTags>
-      
-          <div className="flex-content">
-            <div className="main-wrapper">
-              <main className="main-content">
-        
-                  <ProjectsPresentation selectVideo={this.state.projectVideo} />
-              
-              </main>
-              
-                  <ProjectsWebTechnologies
-                    webTechnologies={this.state.projectWebIcons}
-                    selectDescription={this.state.projectDescription}
-                  />
 
-            </div>
-            <nav className="menu">
-              <div>
-                <FeaturedWork
-                  projects={data.projects}
-                  pics={images}
-                  selectProject={this.selectProject}
-                />
-              </div>
-            </nav>
+        <div className="flex-content">
+          <div className="main-wrapper">
+            <main className="main-content">
+              <ProjectsPresentation selectVideo={this.state.projectVideo} />
+            </main>
+
+            <ProjectsWebTechnologies
+              webTechnologies={this.state.projectWebIcons}
+              selectDescription={this.state.projectDescription}
+            />
           </div>
-          <footer className="footer">
-            <p className="footer p">photos by Marta</p>
-          </footer>
-        
+          <nav className="menu">
+            <div>
+              <FeaturedWork
+                projects={data.projects}
+                pics={images}
+                selectProject={this.selectProject}
+              />
+            </div>
+          </nav>
+        </div>
+        <footer className="footer">
+          <p className="footer p">photos by Marta</p>
+        </footer>
       </div>
     );
   }

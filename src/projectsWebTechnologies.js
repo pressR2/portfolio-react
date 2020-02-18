@@ -6,7 +6,7 @@ class ProjectsWebTechnologies extends React.Component {
     return (
      
     <article className="project-descripion">
-      <div>
+      <div className="icons-wrapper">
         {this.props.webTechnologies.map(function(icons) {
           console.log(icons);
           return (
