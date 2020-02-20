@@ -1,8 +1,8 @@
 {"projects":[
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-react-original-wordmark", "devicon-jquery-plain-wordmark", "devicon-jasmine-plain-wordmark", "devicon-nodejs-plain", "devicon-gimp-plain", "devicon-github-plain-wordmark"],
         "image": "./About-me.PNG",
-        "description": ["", "Hiking enthusiast, Japanese animation fan, avid video game player"],
-        "video": "HB0w4aiD5IY"
+        "description": ["About me", "Dry jokes ninja. A fan of superhero movies and Japanese animation. Hiking enthusiast, avid video game player."],
+        "video": ""
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark"],
         "image": "./AnimalCard.JPG",
