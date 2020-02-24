@@ -22,14 +22,9 @@ class FeaturedWork extends React.Component {
     let selectProject = this.props.selectProject;
     let projectsImage = this.props.pics;
     var settings = {
-      //   dots: true,
       slidesToShow: 3,
       slidesToScroll: 1,
-      vertical: true
-      //   waitForAnimate: true
-      //   focusOnSelect: true
-      //   centerMode: true,
-      //   centerPadding: '60px',
+      vertical: this.props.vertical
     };
     return (
       <div className="post-slider">
@@ -37,7 +32,6 @@ class FeaturedWork extends React.Component {
           <div className="icon-previous" onClick={this.previous}>
             <Chevron />
           </div>
-
           <Slider ref={c => (this.slider = c)} {...settings}>
             {this.props.projects.map(function(project) {
               let oneImage = projectsImage(project.image);
