@@ -1,0 +1,9 @@
+add componentDidMount() to properly manage state,
+add media query,
+add videos to data.json,
+resize photos,
+add README.md,
+add ARIA,
+add comments to code,
+clean code
+
