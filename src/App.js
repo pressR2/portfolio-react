@@ -33,10 +33,12 @@ class App extends Component {
   }
 
   render() {
-    let contentToDisplay =(<ProjectsPresentation selectVideo={this.state.projectVideo} />);
-      if (this.state.projectVideo === "") {
-        contentToDisplay = (<AboutMe/>)
-      }
+    let contentToDisplay = (
+      <ProjectsPresentation selectVideo={this.state.projectVideo} />
+    );
+    if (this.state.projectVideo === "") {
+      contentToDisplay = <AboutMe />;
+    }
     return (
       <div className="main">
         <MetaTags>
@@ -47,48 +49,57 @@ class App extends Component {
         </MetaTags>
 
         <div className="flex-content">
+          <MediaQuery query="(max-device-width: 690px)">
+            <div id="hamburger-menu">
+              <Hamburger />
+            </div>
+          </MediaQuery>
+
           <div className="main-wrapper">
-            <main className="main-content">
-              {contentToDisplay}
-            </main>
-             <ProjectsWebTechnologies
+            <main className="main-content">{contentToDisplay}</main>
+            <ProjectsWebTechnologies
               webTechnologies={this.state.projectWebIcons}
               selectDescription={this.state.projectDescription}
-            /> 
+            />
           </div>
-         
-      
-          <MediaQuery query="(min-device-width: 585px)">
-          <nav className="menu">
-          <FeaturedWork
-               projects={data.projects}
-               pics={images}
-               selectProject={this.selectProject}
-               />
-          </nav>
-          </MediaQuery>
-    
-          <MediaQuery query="(max-device-width: 584px)">
-            
-              <div className = "hamburger">
-              <Hamburger/>
-              </div>
-              <nav id ="menu">
+
+          <MediaQuery query="(min-device-width: 691px) and (max-device-width: 1022px)">
+            <nav className="menu">
               <FeaturedWork
-               projects={data.projects}
-               pics={images}
-               selectProject={this.selectProject}
-               />
-               </nav>
+                projects={data.projects}
+                pics={images}
+                selectProject={this.selectProject}
+                vertical={false}
+              />
+            </nav>
           </MediaQuery>
-          
-          </div>
-          <footer className="footer">
+
+          <MediaQuery query="(max-device-width: 690px)">
+            <nav id="menu">
+              <FeaturedWork
+                projects={data.projects}
+                pics={images}
+                selectProject={this.selectProject}
+                vertical={true}
+              />
+            </nav>
+          </MediaQuery>
+
+          <MediaQuery query="(min-device-width: 1023px)">
+            <nav className="menu">
+              <FeaturedWork
+                projects={data.projects}
+                pics={images}
+                selectProject={this.selectProject}
+                vertical={true}
+              />
+            </nav>
+          </MediaQuery>
+        </div>
+        <footer className="footer">
           <p className="footer p">done by Marta</p>
         </footer>
-      {/* </div> */}
       </div>
-
     );
   }
 }
