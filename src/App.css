@@ -12,6 +12,16 @@ body {
   background-color: #e0dfdf;
 }
 
+.main {
+  min-height: 100vh;
+  overflow: hidden;
+  /* display: block; */
+  position: relative;
+  padding-bottom: 15px;
+  box-sizing: border-box;
+  margin:0 auto;
+}
+
  /* PROJECT PRESENTATION */
 
 .flex-content {
@@ -31,9 +41,10 @@ body {
 .flex-content .main-wrapper .main-content {
   border: 7px double #f5feff78;
   /* border: 1px solid red; */
-  /* margin-bottom: 23px;
-  margin-top: 40px; */
+  margin-bottom: 23px;
+  margin-top: 40px; 
   /* margin-left: 20px; */
+  max-width: 1022px; 
 }
 
 .flex-content .main-wrapper .main-content iframe {
@@ -133,7 +144,7 @@ body {
   /* rgb(7, 181, 172); */
   /* fill: black; */
   display: inline-block; 
-  font-size: 75px;
+  font-size: 39px;
   margin: 7px 5px 0 20px;
 }
 
@@ -174,11 +185,12 @@ body {
   width: 100%;
   color: #7d97ad;
   text-align: center;
-  font-size: 15px;
+  font-size: 13.5px;
   border: none;
   background-color: #2d3c49;
   position: absolute;
   bottom: 0;
+ 
 }
 
 .footer p {
@@ -393,4 +405,51 @@ body {
     margin-left: 15px;
     font-size: 16px;
   }
+}
+
+
+@media only screen and (min-width: 1023px) {
+  .main-wrapper {
+    /* width: 65%; */
+      /* width: 54%; */
+      margin-left: auto;
+      margin-right: 11px;
+      margin-top: 10px;
+      /* margin-right: 18px; */
+      order: 0;
+      /* flex: 1; */
+  }
+  
+  .menu {
+    width: 16%;
+    /* width: 28%; */
+    margin-right: auto;
+    order: 1;
+    /* margin-bottom: 40px; */
+}
+
+.project-descripion .icons-wrapper .icon {
+  font-size: 67px;
+}
+
+.flex-content .main-wrapper {
+  margin-top: 10px;
+}
+
+.flex-content .main-wrapper .main-content {
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.post-slider {
+  margin-top: 40px;
+}
+
+.aboutMe-content hr {
+  border: 2.5px solid #fdb892;
+  background-color: #fdb892;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
 }
