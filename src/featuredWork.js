@@ -4,24 +4,24 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Chevron from "./chevron";
 
+function hideMenu() {
+  const menu = document.getElementById("menu");
+  menu.classList.remove("open");
+}
+
 class FeaturedWork extends React.Component {
   constructor(props) {
     super(props);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
-    this.hideMenu = this.hideMenu.bind(this);
   }
 
   next() {
     this.slider.slickNext();
   }
+
   previous() {
     this.slider.slickPrev();
-  }
-
-  hideMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.removeClass("open");
   }
 
   render() {
@@ -51,8 +51,7 @@ class FeaturedWork extends React.Component {
                   onClick={(function(project) {
                     return function() {
                       selectProject(project);
-                      const menu = document.getElementById("menu");
-                      menu.classList.toggle("open");
+                      hideMenu();
                     };
                   })(project)}
                 ></img>
