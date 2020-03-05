@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import "./App-responsive.css";
 import FeaturedWork from "./featuredWork";
 import * as data from "./date.json";
 import ProjectsWebTechnologies from "./projectsWebTechnologies";
@@ -47,14 +46,12 @@ class App extends Component {
             content="width=device-width, initial-scale=1.0"
           />
         </MetaTags>
-
+        <MediaQuery query="(max-device-width: 973px)">
+          <div id="hamburger-menu">
+            <Hamburger />
+          </div>
+        </MediaQuery>
         <div className="flex-content">
-          <MediaQuery query="(max-device-width: 690px)">
-            <div id="hamburger-menu">
-              <Hamburger />
-            </div>
-          </MediaQuery>
-
           <div className="main-wrapper">
             <main className="main-content">{contentToDisplay}</main>
             <ProjectsWebTechnologies
@@ -62,19 +59,7 @@ class App extends Component {
               selectDescription={this.state.projectDescription}
             />
           </div>
-
-          <MediaQuery query="(min-device-width: 691px) and (max-device-width: 1022px)">
-            <nav className="menu">
-              <FeaturedWork
-                projects={data.projects}
-                pics={images}
-                selectProject={this.selectProject}
-                vertical={false}
-              />
-            </nav>
-          </MediaQuery>
-
-          <MediaQuery query="(max-device-width: 690px)">
+          <MediaQuery query="(max-device-width: 973px)">
             <nav id="menu">
               <FeaturedWork
                 projects={data.projects}
@@ -84,8 +69,7 @@ class App extends Component {
               />
             </nav>
           </MediaQuery>
-
-          <MediaQuery query="(min-device-width: 1023px)">
+          <MediaQuery query="(min-device-width: 974px)">
             <nav className="menu">
               <FeaturedWork
                 projects={data.projects}
@@ -97,7 +81,7 @@ class App extends Component {
           </MediaQuery>
         </div>
         <footer className="footer">
-          <p className="footer p">done by Marta</p>
+          <p className="footer p">Created by Marta</p>
         </footer>
       </div>
     );
