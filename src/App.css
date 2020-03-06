@@ -42,13 +42,12 @@ html {
  /* PROJECT PRESENTATION */
 
 .main-wrapper {
-  margin: 2px 7px 0 7px;
+  margin: 2px 7px 0;
 }
 
 .main-wrapper .main-content {
   border: 7px double #f5feff78;
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   max-width: 1022px;
   max-height: 98%;
 }
@@ -66,15 +65,15 @@ html {
 
 #menu {
   margin-top: 2px; 
-  z-index: 10;
-  max-width: 82%;
+  z-index: 2;
   width: 260px;
+  max-width: 82%;
   overflow: auto;
   position: absolute;
   background-color: #989999;
   transform: translate(-260px,0);
   transition: all .2s ease-in-out;
-  border-radius: 27px 27px 27px 27px;
+  border-radius: 27px;
 }
 
 #menu.open {
@@ -87,7 +86,7 @@ html {
 
 .post-slider {
   border: 7px double #f5feff78;
-  border-radius: 27px 27px 27px 27px;
+  border-radius: 27px;
   display: block;
 }
 
@@ -95,7 +94,7 @@ html {
   width: 98%;
   overflow: hidden;
   display: block;
-  margin: 5px 2px 4px 2px;
+  margin: 5px 2px 4px;
 }
 
 /**  IMAGE POST SLIDER **/
@@ -103,7 +102,7 @@ html {
 .post-slider .post-wrapper .post {
   /* display: inline-block; */
   border-radius: 5px;
-  margin: 5px 0 0 0;
+  margin: 5px 0 0;
   max-width: 100%
   /* none !important; */
 }
@@ -115,7 +114,6 @@ html {
   display: block;
   margin: auto;
   margin-bottom: 3px;
-  /* font-size: 2em; */
   cursor: pointer;
   fill: #2d3c49;
 } 
@@ -138,7 +136,7 @@ html {
 
 .project-description {
   max-width: 1022px;
-  background-color: #eeeeee;
+  background-color: #eee;
   border-bottom-right-radius: 100px;
   border: 7px double #f5feff78;
 }
@@ -159,17 +157,18 @@ html {
 .project-description .description :nth-child(1) {
   font-size: 22px;
   color: #464646;
-  margin: 0 0 0 30px;
+  margin: 0 0 0 10px;
   font-weight: 900;
 }
 
 .project-description .description :nth-child(2) {
-  margin: 3px 2px 0 10px;
+  margin: 3px 2px 5px 10px;
   font-size: 15.5px;
   font-weight: 600;
   color: #757474;
   letter-spacing: 0.5px;
   line-height: 1.4;
+  overflow-wrap: break-word;
 }
 
 /* FOOTER */
@@ -195,16 +194,21 @@ html {
 
 .aboutMe-wrapper {
   /* height: 527px; */
-  background-color: #eeeeee;
+  background-color: #eee;
   display: flex;
   flex-direction: row;
 }
 
  .aboutMe-content hr {
-  margin: 13px 0 0 0;
+  border: 2px solid #fdb892;
+  margin: 13px 0 0;
 } 
 
 /** IMAGE ABOUT ME **/
+
+.aboutMe-wrapper .aboutMe-img {
+  margin: 13px 27px 10px 10px;
+}
 
 .aboutMe-img img {
   border-radius: 27px;
@@ -218,29 +222,30 @@ html {
   color: #464646;
   font-size: 23px;
   letter-spacing: 0.5px;
+  margin-top: 0;
 }
 
 .aboutMe-content h3 {
   color: #464646;
-  margin: 12px 0 1px 0;
+  margin: 12px 0 1px;
   font-size: 17px;
 }
 
 .aboutMe-content p {
   color: #757474;
-  margin: 4px 0 10px 0;
+  margin: 4px 0 10px;
   font-size: 15px;
 }
 
 .aboutMe-content a {
   color: #757474;
-  padding: 10px 0 10px 0;
+  padding: 10px 0;
   font-size: 15px;
   text-decoration: none;
 }
 
 .aboutMe-content a:hover {
-  color: rgb(56, 141, 238);
+  color: #388dee;
 }
 
 
@@ -249,7 +254,11 @@ html {
 @media only screen and (max-width: 450px) {
   .aboutMe-wrapper {
     height: 485px;
-   }  
+   }
+
+   .aboutMe-wrapper .aboutMe-img {
+    margin: 0;
+  }
 
    .aboutMe-img img {
     position: absolute;
@@ -264,7 +273,6 @@ html {
   .aboutMe-content {
     z-index: 1;
     margin: 0 auto;
-    /* width: 260px; */
   }
 
   .aboutMe-content hr {
@@ -284,7 +292,7 @@ html {
   }
 
   .project-description .description :nth-child(1) {
-    margin: 12px 0 0 10px;
+    margin-top: 10px;
   }
 }
 
@@ -293,7 +301,6 @@ html {
   .main-wrapper {
     display: flex;
     flex-direction: column;
-    margin: 2px 7px 0 7px;
   }
 
   .project-descripion .icons-wrapper {
@@ -302,31 +309,7 @@ html {
    }
   
   .project-description .description :nth-child(1) {
-    font-weight: 900;
-    margin: 12px 0 0 10px;
-  }
-  
-  .project-description .description :nth-child(2) {
-    margin: 3px 0 0 10px;
-    overflow-wrap: break-word;
-  }
-
-  .aboutMe-wrapper {
-    /* height: 527px; */
-    background-color: #eeeeee;
-  }
-  
-  .aboutMe-content hr {
-    border: 2px solid #fdb892;
-    margin: 13px 0 0 0;
-  }
-
-  .aboutMe-content h2 {
-    margin-top: 0;
-  }
-  
-  .aboutMe-wrapper .aboutMe-img {
-    margin: 13px 27px 10px 10px;
+    margin-top: 10px;
   }
 }
 
@@ -334,32 +317,26 @@ html {
 @media only screen and (min-width: 640px) and (max-width: 901px) {
   .project-description .icons-wrapper .icon {
     font-size: 50px;
-    margin: 7px 8px 0 10px;
+    margin-right: 8px;
   }
 }
 
 
 @media only screen and (min-width: 902px) and (max-width: 1022px) {
-  .aboutMe-wrapper .aboutMe-img {
-    margin: 13px 27px 10px 10px;
-  }
-  
   .aboutMe-content h2 {
     font-size: 24px;
   }
  
   .project-description .icons-wrapper .icon {
     font-size: 54px;
-    margin: 7px 12px 0 10px;
+    margin-right: 12px;
   }
   
   .project-description .description :nth-child(1) {
     font-size: 24px;
-    margin: 0 0 0 15px;
   }
   
   .project-description .description :nth-child(2) {
-    margin-left: 15px;
     font-size: 16px;  
   }
 }
@@ -368,7 +345,7 @@ html {
 @media only screen and (min-width: 974px) {
   .main-wrapper {
     max-width: 72%;
-    margin-right: 11px;
+    margin: 40px 11px 23px 7px;
     order: 0;
   }
   
@@ -378,34 +355,13 @@ html {
     order: 1;
   }
 
-  .main-wrapper {
-    margin-bottom: 23px;
-    margin-top: 40px;
-  }
-
-  .main-wrapper .main-content {
-    margin: 0 0 11px 0;
-  }
-
   .post-slider {
     margin-top: 40px;
-  }
-
-  .aboutMe-content hr {
-    border: 2px solid #fdb892;
-  }
-
-  .aboutMe-content h2 {
-    margin-top: 0;
   }
 }
 
 
 @media only screen and (min-width: 1022px) { 
-  .aboutMe-wrapper .aboutMe-img {
-    margin: 13px 27px 10px 10px;
-  }
-  
   .aboutMe-img img {
     /* max-height: 95%; */
   }
@@ -416,16 +372,14 @@ html {
 
   .project-description .icons-wrapper .icon {
     font-size: 57px;
-    margin: 7px 12px 0 10px;
+    margin-right: 13px;
   }
   
   .project-description .description :nth-child(1) {
     font-size: 24px;
-    margin: 0 0 0 15px;
   }
   
   .project-description .description :nth-child(2) {
-    margin-left: 15px;
     font-size: 17px;  
   }
 }
