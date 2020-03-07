@@ -149,8 +149,6 @@ html {
 }
 
 .project-description .description {
-  /* height: 130px; */
-  width: 95%;
   height: fit-content;
 }
 
@@ -252,6 +250,10 @@ html {
 /* MEDIA QUERY */
 
 @media only screen and (max-width: 450px) {
+  .main-wrapper {
+    width: 100%;
+  }
+
   .aboutMe-wrapper {
     height: 485px;
    }
@@ -301,6 +303,7 @@ html {
   .main-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 
   .project-descripion .icons-wrapper {
@@ -344,14 +347,13 @@ html {
 
 @media only screen and (min-width: 974px) {
   .main-wrapper {
-    max-width: 72%;
+    width: 70%;
     margin: 40px 11px 23px 7px;
     order: 0;
   }
   
   .menu {
     width: 280px;
-    max-width: 25.6%;
     order: 1;
   }
 
