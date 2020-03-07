@@ -59,6 +59,16 @@ class App extends Component {
               selectDescription={this.state.projectDescription}
             />
           </div>
+          <MediaQuery query="(max-device-width: 973px)">
+            <nav id="menu">
+              <FeaturedWork
+                projects={data.projects}
+                pics={images}
+                selectProject={this.selectProject}
+                vertical={true}
+              />
+            </nav>
+          </MediaQuery>
           <MediaQuery query="(min-device-width: 974px)">
             <nav className="menu">
               <FeaturedWork
