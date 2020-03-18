@@ -9,6 +9,9 @@ html {
   background-color: #e0dfdf;
 }
 
+* {
+  box-sizing: border-box;
+}
 
 /* MAIN */
 
@@ -48,7 +51,6 @@ html {
 .main-wrapper .main-content {
   border: 7px double #f5feff78;
   margin: 0 0 10px;
-  max-width: 1022px;
   max-height: 98%;
 }
 
@@ -56,7 +58,7 @@ html {
 
 .main-wrapper .main-content iframe {
   width: 100%;
-  height: 360px;
+  /* height: 360px; */
   /* max-height: 98%; */
 }
 
@@ -135,9 +137,8 @@ html {
 /* PROJECT DESCRIPTION*/
 
 .project-description {
-  max-width: 1022px;
   background-color: #eee;
-  border-bottom-right-radius: 100px;
+  border-bottom-right-radius: 80px;
   border: 7px double #f5feff78;
 }
 
@@ -145,6 +146,7 @@ html {
   color: #fdb892;
   display: inline-block; 
   font-size: 41px;
+  height: 50px;
   margin: 7px 5px 0 10px;
 }
 
@@ -155,7 +157,7 @@ html {
 .project-description .description :nth-child(1) {
   font-size: 22px;
   color: #464646;
-  margin: 0 0 0 10px;
+  margin: 10px 0 0 10px;
   font-weight: 900;
 }
 
@@ -167,6 +169,8 @@ html {
   letter-spacing: 0.5px;
   line-height: 1.4;
   overflow-wrap: break-word;
+  max-width: 92%;
+  margin-right: 1.28em;
 }
 
 /* FOOTER */
@@ -191,10 +195,13 @@ html {
 /* ABOUT ME */
 
 .aboutMe-wrapper {
-  /* height: 527px; */
   background-color: #eee;
   display: flex;
   flex-direction: row;
+}
+
+.aboutMe-content {
+  word-break: break-all;
 }
 
  .aboutMe-content hr {
@@ -286,15 +293,6 @@ html {
   .aboutMe-content p,
   .aboutMe-content a {
     color: #000;
-    overflow-wrap: break-word;
-  }
-  
-  .project-description .icons-wrapper .icon {
-    height: 50px;
-  }
-
-  .project-description .description :nth-child(1) {
-    margin-top: 10px;
   }
 }
 
@@ -306,14 +304,14 @@ html {
     width: 100%;
   }
 
+  .aboutMe-content {
+    word-break: normal;
+  }
+
   .project-descripion .icons-wrapper {
     display: flex;
     flex-wrap: wrap;
    }
-  
-  .project-description .description :nth-child(1) {
-    margin-top: 10px;
-  }
 }
 
 
@@ -331,8 +329,8 @@ html {
   }
  
   .project-description .icons-wrapper .icon {
-    font-size: 54px;
-    margin-right: 12px;
+    font-size: 52px;
+    margin-right: 10px;
   }
   
   .project-description .description :nth-child(1) {
@@ -347,34 +345,34 @@ html {
 
 @media only screen and (min-width: 974px) {
   .main-wrapper {
-    width: 70%;
-    margin: 40px 11px 23px 7px;
+    width: 1000px;
+    max-width: 68%;
+    margin: 40px 11px 23px 0;
+    margin-left: auto;
     order: 0;
   }
   
   .menu {
-    width: 280px;
+    width: 290px;
+    max-width: 88%;
     order: 1;
+    margin-right: auto;
   }
 
   .post-slider {
-    margin-top: 40px;
+    margin-top: 25px;
   }
 }
 
 
 @media only screen and (min-width: 1022px) { 
-  .aboutMe-img img {
-    /* max-height: 95%; */
-  }
-
   .aboutMe-content h2 {
     font-size: 24px;
   }
 
   .project-description .icons-wrapper .icon {
-    font-size: 57px;
-    margin-right: 13px;
+    font-size: 54px;
+    margin-right: 11px;
   }
   
   .project-description .description :nth-child(1) {
@@ -383,16 +381,5 @@ html {
   
   .project-description .description :nth-child(2) {
     font-size: 17px;  
-  }
-}
-
-
-@media only screen and (min-width: 1150px) {
-  .main-wrapper {
-    margin-left: auto; 
-  }
-  
-  .menu {
-    margin-right: auto;
   }
 }
