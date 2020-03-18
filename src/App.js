@@ -15,13 +15,19 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.selectProject = this.selectProject.bind(this);
+    this.menuHandling = this.menuHandling.bind(this);
   }
 
   state = {
     projectWebIcons: data.projects[0].webIcons,
     projectDescription: data.projects[0].description,
-    projectVideo: ""
+    projectVideo: "",
+    menuHasClass: false
   };
+
+  menuHandling() {
+    this.setState({menuHasClass: !this.state.menuHasClass});
+  }
 
   selectProject(project) {
     this.setState({
@@ -32,6 +38,7 @@ class App extends Component {
   }
 
   render() {
+    let menuClass = this.state.menuHasClass ? "open" : "close";
     let contentToDisplay = (
       <ProjectsPresentation selectVideo={this.state.projectVideo} />
     );
@@ -48,7 +55,7 @@ class App extends Component {
         </MetaTags>
         <MediaQuery query="(max-device-width: 973px)">
           <div id="hamburger-menu">
-            <Hamburger />
+            <Hamburger menuHandling={this.menuHandling}/>
           </div>
         </MediaQuery>
         <div className="flex-content">
@@ -60,12 +67,11 @@ class App extends Component {
             />
           </div>
           <MediaQuery query="(max-device-width: 973px)">
-            <nav id="menu">
+            <nav id="menu" className={menuClass}>
               <FeaturedWork
                 projects={data.projects}
                 pics={images}
                 selectProject={this.selectProject}
-                vertical={true}
               />
             </nav>
           </MediaQuery>
@@ -75,7 +81,6 @@ class App extends Component {
                 projects={data.projects}
                 pics={images}
                 selectProject={this.selectProject}
-                vertical={true}
               />
             </nav>
           </MediaQuery>

@@ -4,11 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Chevron from "./chevron";
 
-function hideMenu() {
-  const menu = document.getElementById("menu");
-  menu.classList.remove("open");
-}
-
 class FeaturedWork extends React.Component {
   constructor(props) {
     super(props);
@@ -30,7 +25,7 @@ class FeaturedWork extends React.Component {
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
-      vertical: this.props.vertical
+      vertical: true
     };
     return (
       <div className="post-slider">
@@ -51,7 +46,6 @@ class FeaturedWork extends React.Component {
                   onClick={(function(project) {
                     return function() {
                       selectProject(project);
-                      hideMenu();
                     };
                   })(project)}
                 ></img>
