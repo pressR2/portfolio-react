@@ -19,9 +19,7 @@ class App extends Component {
   }
 
   state = {
-    projectWebIcons: data.projects[0].webIcons,
-    projectDescription: data.projects[0].description,
-    projectVideo: "",
+    project: data.projects[0],
     menuHasClass: false
   };
 
@@ -31,20 +29,20 @@ class App extends Component {
 
   selectProject(project) {
     this.setState({
-      projectWebIcons: project.webIcons,
-      projectDescription: project.description,
-      projectVideo: project.video
+      project: project
     });
   }
 
   render() {
     let menuClass = this.state.menuHasClass ? "open" : "close";
     let contentToDisplay = (
-      <ProjectsPresentation selectVideo={this.state.projectVideo} />
+      <ProjectsPresentation selectVideo={this.state.project.video} />
     );
-    if (this.state.projectVideo === "") {
+
+    if (this.state.project.video === "") {
       contentToDisplay = <AboutMe />;
     }
+  
     return (
       <div className="main">
         <MetaTags>
@@ -62,8 +60,8 @@ class App extends Component {
           <div className="main-wrapper">
             <main className="main-content">{contentToDisplay}</main>
             <ProjectsWebTechnologies
-              webTechnologies={this.state.projectWebIcons}
-              selectDescription={this.state.projectDescription}
+              webTechnologies={this.state.project.webIcons}
+              selectDescription={this.state.project.description}
             />
           </div>
           <MediaQuery query="(max-device-width: 973px)">
