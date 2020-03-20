@@ -21,6 +21,8 @@ class FeaturedWork extends React.Component {
 
   render() {
     let selectProject = this.props.selectProject;
+    let currentProject = this.props.currentProject;
+    console.log(currentProject);
     let projectsImage = this.props.pics;
     var settings = {
       slidesToShow: 3,
@@ -36,10 +38,13 @@ class FeaturedWork extends React.Component {
           <Slider ref={c => (this.slider = c)} {...settings}>
             {this.props.projects.map(function(project) {
               let oneImage = projectsImage(project.image);
-
+              let imageClass = "post";
+                if (project === currentProject) {
+                   imageClass = "post post-border";
+                }
               return (
                 <img
-                  className="post"
+                  className={imageClass}
                   key={project.image}
                   src={oneImage}
                   alt=""

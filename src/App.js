@@ -70,6 +70,7 @@ class App extends Component {
                 projects={data.projects}
                 pics={images}
                 selectProject={this.selectProject}
+                currentProject={this.state.project}
               />
             </nav>
           </MediaQuery>
@@ -79,6 +80,7 @@ class App extends Component {
                 projects={data.projects}
                 pics={images}
                 selectProject={this.selectProject}
+                currentProject={this.state.project}
               />
             </nav>
           </MediaQuery>
