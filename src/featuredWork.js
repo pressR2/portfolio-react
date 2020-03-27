@@ -22,38 +22,39 @@ class FeaturedWork extends React.Component {
   render() {
     let selectProject = this.props.selectProject;
     let currentProject = this.props.currentProject;
-    console.log(currentProject);
-    let projectsImage = this.props.pics;
+    let imagesContext = this.props.pics;
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
+      draggable: false,
       vertical: true
     };
     return (
-      <div className="post-slider">
-        <div className="post-wrapper">
+      <div className="projects-slider">
+        <div className="projects-wrapper">
           <div className="icon-previous" onClick={this.previous}>
             <Chevron />
           </div>
           <Slider ref={c => (this.slider = c)} {...settings}>
             {this.props.projects.map(function(project) {
-              let oneImage = projectsImage(project.image);
-              let imageClass = "post";
+              let imageUrl = imagesContext(project.image);
+              console.log(imageUrl);
+              let imageClass = "project-image";
                 if (project === currentProject) {
-                   imageClass = "post post-border";
+                   imageClass = "project-image select-project";
                 }
               return (
-                <img
-                  className={imageClass}
-                  key={project.image}
-                  src={oneImage}
-                  alt=""
-                  onClick={(function(project) {
-                    return function() {
-                      selectProject(project);
-                    };
-                  })(project)}
-                ></img>
+                  <img
+                    className={imageClass}
+                    key={project.image}
+                    src={imageUrl}
+                    alt=""
+                    onClick={(function(projectToApply) {
+                      return function() {
+                        selectProject(projectToApply);
+                      };
+                    })(project)}
+                  ></img>
               );
             })}
           </Slider>
