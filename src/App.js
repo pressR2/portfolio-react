@@ -61,6 +61,7 @@ class App extends Component {
             <main className="main-content">{contentToDisplay}</main>
             <ProjectsWebTechnologies
               webTechnologies={this.state.project.webIcons}
+              gitHubLink={this.state.project.gitHubLink}
               selectDescription={this.state.project.description}
             />
           </div>

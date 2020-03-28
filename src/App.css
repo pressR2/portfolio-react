@@ -17,7 +17,7 @@ html {
   overflow: hidden;
   display: block;
   position: relative;
-  padding-bottom: 17px;
+  padding-bottom: 18px;
   box-sizing: border-box;
   margin: 0 auto;
 }
@@ -140,6 +140,7 @@ html {
   background-color: #eee;
   border-bottom-right-radius: 80px;
   border: 7px double #f5feff78;
+  
 }
 
 .project-description .icons-wrapper .icon {
@@ -154,14 +155,29 @@ html {
   height: fit-content;
 }
 
-.project-description .description :nth-child(1) {
+.description .description-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.description .description-header a {
+  text-decoration: none;
+  color: #388dee;
+  margin: 18px 0 0 25px;
+}
+
+.description .description-header a:hover {
+  font-size: 17px;
+}
+
+.project-description .description h1 {
   font-size: 22px;
   color: #464646;
   margin: 10px 0 0 10px;
   font-weight: 900;
 }
 
-.project-description .description :nth-child(2) {
+.project-description .description p {
   margin: 3px 2px 5px 10px;
   font-size: 15.5px;
   font-weight: 600;
@@ -295,6 +311,10 @@ html {
   .aboutMe-content a {
     color: #000;
   }
+
+  .description .description-header a {
+    margin-top: 15px;
+  }
 }
 
 
@@ -313,6 +333,10 @@ html {
     display: flex;
     flex-wrap: wrap;
    }
+
+   .description .description-header a {
+    margin-top: 15px;
+  }
 }
 
 
@@ -334,11 +358,11 @@ html {
     margin-right: 10px;
   }
   
-  .project-description .description :nth-child(1) {
+  .project-description .description h1 {
     font-size: 24px;
   }
   
-  .project-description .description :nth-child(2) {
+  .project-description .description p {
     font-size: 16px;  
   }
 }
@@ -375,11 +399,11 @@ html {
     margin-right: 11px;
   }
   
-  .project-description .description :nth-child(1) {
+  .project-description .description h1 {
     font-size: 24px;
   }
   
-  .project-description .description :nth-child(2) {
+  .project-description .description p {
     font-size: 17px;  
   }
 }
