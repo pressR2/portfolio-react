@@ -4,7 +4,7 @@ import aboutMeImage from "./image2.PNG";
 class AboutMe extends React.Component {
   render() {
     return (
-      <div className="aboutMe-wrapper">
+      <article className="aboutMe-wrapper">
         <div className="aboutMe-img">
           <img src={aboutMeImage} alt="" />
         </div>
@@ -20,7 +20,7 @@ class AboutMe extends React.Component {
             codewars.com/users/Marta_R2
           </a>
         </div>
-      </div>
+      </article>
     );
   }
 }

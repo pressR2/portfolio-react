@@ -19,13 +19,13 @@ class ProjectsWebTechnologies extends React.Component {
             );
           })}
         </div>
-        <div className="description">
+        <article className="description">
           <div className="description-header">
             <h1>{this.props.selectDescription[0]}</h1>
             <a href={this.props.gitHubLink}>{linkText}</a>
           </div>
           <p>{this.props.selectDescription[1]}</p>
-        </div>
+        </article>
       </article>
     );
   }

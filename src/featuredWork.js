@@ -30,7 +30,7 @@ class FeaturedWork extends React.Component {
       vertical: true
     };
     return (
-      <div className="projects-slider">
+      <nav className="projects-slider">
         <div className="projects-wrapper">
           <div className="icon-previous" onClick={this.previous}>
             <Chevron />
@@ -62,7 +62,7 @@ class FeaturedWork extends React.Component {
             <Chevron />
           </div>
         </div>
-      </div>
+      </nav>
     );
   }
 }
