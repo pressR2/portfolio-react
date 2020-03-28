@@ -2,47 +2,56 @@
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-react-original-wordmark", "devicon-jquery-plain-wordmark", "devicon-jasmine-plain-wordmark", "devicon-nodejs-plain", "devicon-gimp-plain", "devicon-github-plain-wordmark"],
         "image": "./About-me.PNG",
         "description": ["About me", "Dry jokes ninja. A fan of superhero movies and Japanese animation. Hiking enthusiast, avid video game player."],
+        "gitHubLink": "",
         "video": ""
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark"],
         "image": "./AnimalCard.JPG",
         "description": ["Animal Trading Card", "Simple functional webpage translated from a design prototype."],
-        "video": ""
+        "gitHubLink": "",
+        "video": "HB0w4aiD5IY"
     },
-    {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain"],
+    {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-jquery-plain-wordmark"],
         "image": "./PixelArtMaker.png",
         "description": ["Pixel Art Maker", "A single-page app where the user can create artistic designs."],
-        "video": ""
+        "gitHubLink": "https://github.com/pressR2/pressR2.github.io/tree/master/pixel_art_maker",
+        "video": "pRtVJGBff1k"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-jquery-plain-wordmark"],
         "image": "./MemoryGame.png",
         "description": ["Memory Game", "Complete browser-based card matching game."],
-        "video": ""
+        "gitHubLink": "https://github.com/pressR2/MemoryGame",
+        "video": "UglDsUIXJRQ"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain"],
         "image": "./RestaurantReviews-app.png",
         "description": ["Restaurant Reviews App", "Fully responsive web application with accessibility standards. This app also caches some assets for offline use."],
-        "video": ""
+        "gitHubLink": "https://github.com/pressR2/RestaurantApp",
+        "video": "HB0w4aiD5IY"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain"],
         "image": "./ArcadeGame.PNG",
         "description": ["Classic Arcade Game Clone", "A frogger clone game on canvas, with keyboard input and is implemented using JavaScript object-oriented programming features."],
-        "video": ""
+        "gitHubLink": "https://github.com/pressR2/ArcadeGame",
+        "video": "nptvPm27beA"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-react-original-wordmark"],
         "image": "./MyReads.png",
         "description": ["MyReads: A Book Tracking App", "A web application that allows to select and categorize books user have read, are currently reading, or want to read."],
-        "video": ""
+        "gitHubLink": "https://github.com/pressR2/MyReads",
+        "video": "JgWdrcE7eGU"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-jasmine-plain-wordmark"],
         "image": "./FeedReaderTesting.png",
         "description": ["Feed Reader Testing", "A web-based application that loads and displays RSS feeds."],
-        "video": ""
+        "gitHubLink": "https://github.com/pressR2/FeedReaderTesting",
+        "video": "HB0w4aiD5IY"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-react-original-wordmark"],
         "image": "./Neighborhood.png",
         "description": ["Neighborhood Map", "A single page map application uses the Google Maps API. Integrates a third-party data API with accessibility standards and some usability offline."],
-        "video": ""
+        "gitHubLink": "https://github.com/pressR2/NeighborhoodMap",
+        "video": "HB0w4aiD5IY"
     }
 
 ]}
