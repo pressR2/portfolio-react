@@ -5,7 +5,7 @@ class ProjectsPresentation extends React.Component {
   render() {
     const opts = {
       height: "520",
-      width: "1022",
+      width: "640",
       playerVars: { rel: 0 }
     };
     return (
