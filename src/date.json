@@ -1,57 +1,56 @@
 {"projects":[
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-react-original-wordmark", "devicon-jquery-plain-wordmark", "devicon-jasmine-plain-wordmark", "devicon-nodejs-plain", "devicon-gimp-plain", "devicon-github-plain-wordmark"],
-        "image": "./About-me.PNG",
+        "image": "./about-me.PNG",
         "description": ["About me", "Dry jokes ninja. A fan of superhero movies and Japanese animation. Hiking enthusiast, avid video game player."],
         "gitHubLink": "",
         "video": ""
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark"],
-        "image": "./AnimalCard.JPG",
-        "description": ["Animal Trading Card", "Simple functional webpage translated from a design prototype."],
-        "gitHubLink": "",
-        "video": "HB0w4aiD5IY"
+        "image": "./responsive-old-portfolio-site.png",
+        "description": ["Previous responsive portfolio site", "Simple functional webpage translated from a design prototype."],
+        "gitHubLink": "https://github.com/pressR2/pressR2.github.io.git",
+        "video": "l3pdOU17Ayo"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-jquery-plain-wordmark"],
-        "image": "./PixelArtMaker.png",
-        "description": ["Pixel Art Maker", "A single-page app where the user can create artistic designs."],
+        "image": "./pixel-art-maker.png",
+        "description": ["Pixel Art Maker", "A single-page web app where the user can create artistic designs."],
         "gitHubLink": "https://github.com/pressR2/pressR2.github.io/tree/master/pixel_art_maker",
-        "video": "pRtVJGBff1k"
+        "video": "-TwYf7yi-_E"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-jquery-plain-wordmark"],
-        "image": "./MemoryGame.png",
+        "image": "./memory-game.png",
         "description": ["Memory Game", "Complete browser-based card matching game."],
         "gitHubLink": "https://github.com/pressR2/MemoryGame",
-        "video": "UglDsUIXJRQ"
+        "video": "3VYCJz1jek0"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain"],
-        "image": "./RestaurantReviews-app.png",
+        "image": "./restaurant-reviews-app.png",
         "description": ["Restaurant Reviews App", "Fully responsive web application with accessibility standards. This app also caches some assets for offline use."],
         "gitHubLink": "https://github.com/pressR2/RestaurantApp",
-        "video": "HB0w4aiD5IY"
+        "video": "gk-LIsFClII"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain"],
-        "image": "./ArcadeGame.PNG",
+        "image": "./arcade-game.PNG",
         "description": ["Classic Arcade Game Clone", "A frogger clone game on canvas, with keyboard input and is implemented using JavaScript object-oriented programming features."],
         "gitHubLink": "https://github.com/pressR2/ArcadeGame",
-        "video": "nptvPm27beA"
+        "video": "qq_XZEKEb44"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-react-original-wordmark"],
-        "image": "./MyReads.png",
+        "image": "./my-reads.png",
         "description": ["MyReads: A Book Tracking App", "A web application that allows to select and categorize books user have read, are currently reading, or want to read."],
         "gitHubLink": "https://github.com/pressR2/MyReads",
-        "video": "JgWdrcE7eGU"
+        "video": "acMK0taLZNM"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-jasmine-plain-wordmark"],
-        "image": "./FeedReaderTesting.png",
+        "image": "./feed-reader-testing.png",
         "description": ["Feed Reader Testing", "A web-based application that loads and displays RSS feeds."],
         "gitHubLink": "https://github.com/pressR2/FeedReaderTesting",
         "video": "HB0w4aiD5IY"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-react-original-wordmark"],
-        "image": "./Neighborhood.png",
+        "image": "./neighborhood-map.png",
         "description": ["Neighborhood Map", "A single page map application uses the Google Maps API. Integrates a third-party data API with accessibility standards and some usability offline."],
         "gitHubLink": "https://github.com/pressR2/NeighborhoodMap",
-        "video": "HB0w4aiD5IY"
+        "video": "mr16Xy4a62o"
     }
-
 ]}
