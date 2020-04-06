@@ -6,7 +6,7 @@ class AboutMe extends React.Component {
     return (
       <article className="aboutMe-wrapper">
         <div className="aboutMe-img">
-          <img src={aboutMeImage} alt="" />
+          <img src={aboutMeImage} alt="Author's photo" />
         </div>
         <div className="aboutMe-content">
           <hr></hr>

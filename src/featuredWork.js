@@ -48,7 +48,7 @@ class FeaturedWork extends React.Component {
                     className={imageClass}
                     key={project.image}
                     src={imageUrl}
-                    alt=""
+                    alt={project.description[0]}
                     onClick={(function(projectToApply) {
                       return function() {
                         selectProject(projectToApply);
