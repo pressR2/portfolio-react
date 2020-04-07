@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import "./AppResponsive.css";
 import FeaturedWork from "./featuredWork";
 import * as data from "./date.json";
 import ProjectsWebTechnologies from "./projectsWebTechnologies";
