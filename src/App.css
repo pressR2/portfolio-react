@@ -82,13 +82,13 @@ html {
 
 /* PROJECTS SLIDER */
 
-.projects-slider {
+.carousel {
   border: 7px double #f5feff78;
   border-radius: 27px;
   display: block;
 }
 
-.projects-slider .projects-wrapper {
+.carousel .carousel-inner {
   overflow: hidden;
   padding: 5px 2px 5px 1px;
   display: block;
@@ -96,7 +96,7 @@ html {
 
 /**  PROJECT IMAGE  **/
 
-.projects-slider .projects-wrapper .project-image {
+.carousel .carousel-inner .project-image {
   max-width: 100%;
   padding: 0;
   display: block;
@@ -104,15 +104,15 @@ html {
   transition: transform 200ms ease-in;
 }
 
-.projects-slider .projects-wrapper .select-project {
+.carousel .carousel-inner .select-project {
   display: block;
   max-width: 100%;
   transform: scale(1);
 } 
 
-/**  ICONS PROJECTS SLIDER **/
+/**  CONTROLS PROJECTS SLIDER **/
 
-.projects-slider .projects-wrapper .icon-previous {
+.carousel .carousel-inner .previous {
   width: 43px;
   display: block;
   margin: 0 auto;
@@ -120,7 +120,7 @@ html {
   fill: #2b3946;
 } 
 
-.projects-slider .projects-wrapper .icon-next {
+.carousel .carousel-inner .next {
   width: 43px;
   display: block;
   margin: 0 auto;
@@ -384,7 +384,7 @@ html {
     margin-right: auto;
   }
 
-  .projects-slider {
+  .carousel {
     margin-top: 25px;
   }
 }
