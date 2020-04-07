@@ -27,42 +27,69 @@ class FeaturedWork extends React.Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       draggable: false,
-      vertical: true
+      vertical: true,
+      arrows: false,
     };
     return (
-      <nav className="projects-slider">
-        <div className="projects-wrapper">
-          <div className="icon-previous" onClick={this.previous}>
+      <section
+        className="carousel"
+        aria-roledescription="carousel"
+        aria-label="Projects list"
+      >
+        <div className="carousel-inner">
+          <div
+            className="previous"
+            onClick={this.previous}
+            role="button"
+            aria-label="Previous Slide"
+            tabIndex={1}
+          >
             <Chevron />
           </div>
-          <Slider ref={c => (this.slider = c)} {...settings}>
-            {this.props.projects.map(function(project) {
-              let imageUrl = imagesContext(project.image);
-              console.log(imageUrl);
-              let imageClass = "project-image";
+          <div className="carousel-items" aria-live="polite">
+            <Slider ref={(c) => (this.slider = c)} {...settings}>
+              {this.props.projects.map(function (project, index) {
+                let projectIndex = index;
+                let imageUrl = imagesContext(project.image);
+                console.log(imageUrl);
+                let imageClass = "project-image";
                 if (project === currentProject) {
-                   imageClass = "project-image select-project";
+                  imageClass = "project-image select-project";
                 }
-              return (
-                  <img
-                    className={imageClass}
-                    key={project.image}
-                    src={imageUrl}
-                    alt={project.description[0]}
-                    onClick={(function(projectToApply) {
-                      return function() {
-                        selectProject(projectToApply);
-                      };
-                    })(project)}
-                  ></img>
-              );
-            })}
-          </Slider>
-          <div className="icon-next" onClick={this.next}>
+                return (
+                  <div
+                    className="carousel-item"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-label={projectIndex + " of 9"}
+                  >
+                    <img
+                      className={imageClass}
+                      key={project.image}
+                      src={imageUrl}
+                      alt={project.description[0]}
+                      onClick={(function (projectToApply) {
+                        return function () {
+                          selectProject(projectToApply);
+                        };
+                      })(project)}
+                    ></img>
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
+          <div
+            className="next"
+            onClick={this.next}
+            role="button"
+            aria-label="Next Slide"
+            tabIndex={2}
+          >
             <Chevron />
           </div>
         </div>
-      </nav>
+      </section>
     );
   }
 }
