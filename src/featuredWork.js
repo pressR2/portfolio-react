@@ -23,12 +23,13 @@ class FeaturedWork extends React.Component {
     let selectProject = this.props.selectProject;
     let currentProject = this.props.currentProject;
     let imagesContext = this.props.pics;
+    let numberOfProjects = this.props.projects;
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
       draggable: false,
       vertical: true,
-      arrows: false,
+      arrows: false
     };
     return (
       <section
@@ -46,7 +47,7 @@ class FeaturedWork extends React.Component {
           >
             <Chevron />
           </div>
-          <div className="carousel-items" aria-live="polite">
+          <div aria-live="polite">
             <Slider ref={(c) => (this.slider = c)} {...settings}>
               {this.props.projects.map(function (project, index) {
                 let projectIndex = index;
@@ -57,13 +58,7 @@ class FeaturedWork extends React.Component {
                   imageClass = "project-image select-project";
                 }
                 return (
-                  <div
-                    className="carousel-item"
-                    role="group"
-                    aria-roledescription="slide"
-                    aria-label={projectIndex + " of 9"}
-                  >
-                    <img
+                    <img role="group" aria-roledescription="slide" aria-label={projectIndex + " of " + numberOfProjects.length}
                       className={imageClass}
                       key={project.image}
                       src={imageUrl}
@@ -74,7 +69,6 @@ class FeaturedWork extends React.Component {
                         };
                       })(project)}
                     ></img>
-                  </div>
                 );
               })}
             </Slider>
