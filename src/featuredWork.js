@@ -29,7 +29,8 @@ class FeaturedWork extends React.Component {
       slidesToScroll: 1,
       draggable: false,
       vertical: true,
-      arrows: false
+      arrows: false,
+      accessibility: true
     };
     return (
       <section
@@ -58,7 +59,8 @@ class FeaturedWork extends React.Component {
                   imageClass = "project-image select-project";
                 }
                 return (
-                    <img role="group" aria-roledescription="slide" aria-label={projectIndex + " of " + numberOfProjects.length}
+                  <div role="group" aria-roledescription="slide" aria-label={`${projectIndex + 1} of ${numberOfProjects.length}`} >
+                    <img tabIndex={projectIndex + 2}
                       className={imageClass}
                       key={project.image}
                       src={imageUrl}
@@ -69,6 +71,7 @@ class FeaturedWork extends React.Component {
                         };
                       })(project)}
                     ></img>
+                  </div>
                 );
               })}
             </Slider>
@@ -78,7 +81,7 @@ class FeaturedWork extends React.Component {
             onClick={this.next}
             role="button"
             aria-label="Next Slide"
-            tabIndex={2}
+            tabIndex={10}
           >
             <Chevron />
           </div>
