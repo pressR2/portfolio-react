@@ -96,7 +96,7 @@ html {
 
 /**  PROJECT IMAGE  **/
 
-.carousel .carousel-inner .project-image  {
+.carousel .carousel-inner .project-image {
   width: 100%;
   padding: 0;
   display: block;
@@ -105,26 +105,23 @@ html {
 }
 
 .carousel .carousel-inner .select-project {
-  /* display: block; */
   transform: scale(0.99);
 } 
 
 /**  CONTROLS PROJECTS SLIDER **/
 
-.carousel .carousel-inner .previous {
-  width: 43px;
+.carousel .carousel-inner .previous,
+.carousel .carousel-inner .next {
+  width: 46px;
   display: block;
   margin: 0 auto;
   cursor: pointer;
   fill: #2b3946;
+  background-color: transparent;
+  border: none;
 } 
 
 .carousel .carousel-inner .next {
-  width: 43px;
-  display: block;
-  margin: 0 auto;
-  cursor: pointer;
-  fill: #2b3946;
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -o-transform: rotate(180deg);
@@ -138,8 +135,7 @@ html {
 .project-description {
   background-color: #eee;
   border-bottom-right-radius: 80px;
-  border: 7px double #f5feff78;
-  
+  border: 7px double #f5feff78; 
 }
 
 .project-description .icons-wrapper .icon {
@@ -268,5 +264,4 @@ html {
 
 .aboutMe-content a:hover {
   color: #388dee;
-  /* font-size: 17px; */
 }

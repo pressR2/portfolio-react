@@ -39,15 +39,14 @@ class FeaturedWork extends React.Component {
         aria-label="Projects list"
       >
         <div className="carousel-inner">
-          <div
+          <button
             className="previous"
             onClick={this.previous}
-            role="button"
             aria-label="Previous Slide"
             tabIndex={1}
           >
             <Chevron />
-          </div>
+          </button>
           <div aria-live="polite">
             <Slider ref={(c) => (this.slider = c)} {...settings}>
               {this.props.projects.map(function (project, index) {
@@ -84,15 +83,14 @@ class FeaturedWork extends React.Component {
               })}
             </Slider>
           </div>
-          <div
+          <button
             className="next"
             onClick={this.next}
-            role="button"
             aria-label="Next Slide"
             tabIndex={11}
           >
             <Chevron />
-          </div>
+          </button>
         </div>
       </section>
     );
