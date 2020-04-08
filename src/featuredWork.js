@@ -59,14 +59,22 @@ class FeaturedWork extends React.Component {
                   imageClass = "project-image select-project";
                 }
                 return (
-                  <div role="group" aria-roledescription="slide" aria-label={`${projectIndex + 1} of ${numberOfProjects.length}`} >
+                  <div key={project.image} role="group" aria-roledescription="slide" aria-label={`${projectIndex + 1} of ${numberOfProjects.length}`} >
                     <img tabIndex={projectIndex + 2}
                       className={imageClass}
-                      key={project.image}
                       src={imageUrl}
                       alt={project.description[0]}
+                      onKeyDown={(function(projectToApply){
+                        return function (event) {
+                          console.log(event.keyCode);
+                          if (event.keyCode === 13 || event.keyCode === 32) {
+                            selectProject(projectToApply);
+                          }
+                        }
+                      }
+                        )(project)}
                       onClick={(function (projectToApply) {
-                        return function () {
+                        return function (event) {
                           selectProject(projectToApply);
                         };
                       })(project)}
@@ -81,7 +89,7 @@ class FeaturedWork extends React.Component {
             onClick={this.next}
             role="button"
             aria-label="Next Slide"
-            tabIndex={10}
+            tabIndex={11}
           >
             <Chevron />
           </div>
