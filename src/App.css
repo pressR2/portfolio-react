@@ -96,8 +96,8 @@ html {
 
 /**  PROJECT IMAGE  **/
 
-.carousel .carousel-inner .project-image {
-  max-width: 100%;
+.carousel .carousel-inner .project-image  {
+  width: 100%;
   padding: 0;
   display: block;
   transform: scale(0.92);
@@ -105,9 +105,8 @@ html {
 }
 
 .carousel .carousel-inner .select-project {
-  display: block;
-  max-width: 100%;
-  transform: scale(1);
+  /* display: block; */
+  transform: scale(0.99);
 } 
 
 /**  CONTROLS PROJECTS SLIDER **/
@@ -269,4 +268,5 @@ html {
 
 .aboutMe-content a:hover {
   color: #388dee;
+  /* font-size: 17px; */
 }
