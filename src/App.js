@@ -6,7 +6,6 @@ import * as data from "./date.json";
 import ProjectsWebTechnologies from "./projectsWebTechnologies";
 import ProjectsPresentation from "./projectsPresentation";
 import AboutMe from "./aboutMe.js";
-import MetaTags from "react-meta-tags";
 import Hamburger from "./hamburger.js";
 import MediaQuery from "react-responsive";
 
@@ -21,16 +20,16 @@ class App extends Component {
 
   state = {
     project: data.projects[0],
-    menuHasClass: false
+    menuHasClass: false,
   };
 
   menuHandling() {
-    this.setState({menuHasClass: !this.state.menuHasClass});
+    this.setState({ menuHasClass: !this.state.menuHasClass });
   }
 
   selectProject(project) {
     this.setState({
-      project: project
+      project: project,
     });
   }
 
@@ -43,29 +42,25 @@ class App extends Component {
     if (this.state.project.video === "") {
       contentToDisplay = <AboutMe />;
     }
-  
+
     return (
-      <div className="main">
-        <MetaTags>
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-        </MetaTags>
+      <div className="main-wrapper">
         <MediaQuery query="(max-device-width: 973px)">
-          <div id="hamburger-menu">
-            <Hamburger menuHandling={this.menuHandling}/>
+          <div>
+            <Hamburger menuHandling={this.menuHandling} />
           </div>
         </MediaQuery>
         <div className="flex-content">
-          <div className="main-wrapper">
-            <main className="main-content">{contentToDisplay}</main>
-            <ProjectsWebTechnologies
-              webTechnologies={this.state.project.webIcons}
-              gitHubLink={this.state.project.gitHubLink}
-              selectDescription={this.state.project.description}
-            />
-          </div>
+          <main className="main">
+            <section>
+              <div className="main-content">{contentToDisplay}</div>
+              <ProjectsWebTechnologies
+                webTechnologies={this.state.project.webIcons}
+                gitHubLink={this.state.project.gitHubLink}
+                selectDescription={this.state.project.description}
+              />
+            </section>
+          </main>
           <MediaQuery query="(max-device-width: 973px)">
             <nav id="menu" className={menuClass}>
               <FeaturedWork

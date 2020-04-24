@@ -2,31 +2,36 @@ import React from "react";
 
 class ProjectsWebTechnologies extends React.Component {
   render() {
-    // console.log(this.props.selectDescription)
     let linkText = "github";
+    let githubLink = (
+      <a className="github-repo" href={this.props.gitHubLink}>
+        {linkText}
+      </a>
+    );
     if (this.props.gitHubLink === "") {
-      linkText = "";
+      githubLink = <div></div>;
     }
     return (
-      <article className="project-description">
-        <div className="icons-wrapper">
-          {this.props.webTechnologies.map(function(icons) {
-            // console.log(icons);
+      <div aria-label="Project presentation" className="project-presentation">
+        <div aria-label="Project web technologies" className="icons-wrapper">
+          {this.props.webTechnologies.map(function (icons) {
+            // console.log(typeof(icons));
+            let iconText = icons.split("-");
             return (
               <div className="icon" key={icons}>
-                <i className={icons}></i>
+                <i className={icons} aria-label={iconText[1]}></i>
               </div>
             );
           })}
         </div>
-        <article className="description">
-          <div className="description-header">
-            <h1>{this.props.selectDescription[0]}</h1>
-            <a href={this.props.gitHubLink}>{linkText}</a>
-          </div>
-          <p>{this.props.selectDescription[1]}</p>
+        <article aria-label="Project description" className="project-description">
+          <header className="title-and-link">
+            <h1 className="project-title">{this.props.selectDescription[0]}</h1>
+            {githubLink}
+          </header>
+          <p className="description">{this.props.selectDescription[1]}</p>
         </article>
-      </article>
+      </div>
     );
   }
 }
