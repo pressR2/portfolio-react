@@ -52,7 +52,6 @@ class FeaturedWork extends React.Component {
               {this.props.projects.map(function (project, index) {
                 let projectIndex = index;
                 let imageUrl = imagesContext(project.image);
-                console.log(imageUrl);
                 let imageClass = "project-image";
                 if (project === currentProject) {
                   imageClass = "project-image select-project";
@@ -65,13 +64,11 @@ class FeaturedWork extends React.Component {
                       alt={project.description[0]}
                       onKeyDown={(function(projectToApply){
                         return function (event) {
-                          console.log(event.keyCode);
                           if (event.keyCode === 13 || event.keyCode === 32) {
                             selectProject(projectToApply);
                           }
                         }
-                      }
-                        )(project)}
+                      })(project)}
                       onClick={(function (projectToApply) {
                         return function (event) {
                           selectProject(projectToApply);
