@@ -1,7 +1,7 @@
 /* MEDIA QUERY */
 
 @media only screen and (max-width: 450px) {
-    .main-wrapper {
+    .main {
       width: 100%;
     }
   
@@ -9,11 +9,11 @@
       height: 485px;
      }
   
-     .aboutMe-wrapper .aboutMe-img {
+    .aboutMe-wrapper .image-box {
       margin: 0;
     }
   
-     .aboutMe-img img {
+    .image-box .author {
       position: absolute;
       top: 54px;
       left: 0;
@@ -23,52 +23,52 @@
       filter: opacity(52%);
     }
     
-    .aboutMe-content {
+    .personal-information {
       z-index: 1;
       margin: 0 auto;
     }
   
-    .aboutMe-content hr {
+    .orange-line {
       border: none;
     }
   
-    .aboutMe-content h2,
-    .aboutMe-content h3,
-    .aboutMe-content p,
-    .aboutMe-content a {
+    .self-introduce,
+    .personal-item-title,
+    .personal-item,
+    .personal-item .title-link {
       color: #000;
     }
   
-    .description .description-header a {
+    .project-description .title-and-link .github-repo {
       margin-top: 15px;
     }
   }
   
   
   @media only screen and (min-width: 451px) and (max-width: 973px) {
-    .main-wrapper {
+    .main {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
   
-    .aboutMe-content {
+    /* .personal-information {
       word-break: normal;
-    }
+    } */
   
     .project-descripion .icons-wrapper {
       display: flex;
       flex-wrap: wrap;
      }
   
-     .description .description-header a {
+     .project-description .github-repo {
       margin-top: 15px;
     }
   }
   
   
   @media only screen and (min-width: 640px) and (max-width: 901px) {
-    .project-description .icons-wrapper .icon {
+    .project-presentation .icons-wrapper .icon {
       font-size: 50px;
       margin-right: 8px;
     }
@@ -76,27 +76,27 @@
   
   
   @media only screen and (min-width: 902px) and (max-width: 1022px) {
-    .aboutMe-content h2 {
+    .self-introduce {
       font-size: 24px;
     }
    
-    .project-description .icons-wrapper .icon {
+    .project-presentation .icons-wrapper .icon {
       font-size: 52px;
       margin-right: 10px;
     }
     
-    .project-description .description h1 {
+    .project-presentation .project-description .project-title {
       font-size: 24px;
     }
     
-    .project-description .description p {
+    .project-presentation .project-description .description {
       font-size: 16px;  
     }
   }
   
   
   @media only screen and (min-width: 974px) {
-    .main-wrapper {
+    .main {
       width: 1000px;
       max-width: 68%;
       margin: 40px 11px 23px 0;
@@ -117,20 +117,20 @@
   
   
   @media only screen and (min-width: 1022px) { 
-    .aboutMe-content h2 {
+    .self-introduce {
       font-size: 24px;
     }
   
-    .project-description .icons-wrapper .icon {
+    .project-presentation .icons-wrapper .icon {
       font-size: 54px;
       margin-right: 11px;
     }
     
-    .project-description .description h1 {
+    .project-presentation .project-description .project-title {
       font-size: 24px;
     }
     
-    .project-description .description p {
+    .project-presentation .project-description .description {
       font-size: 17px;  
     }
   }

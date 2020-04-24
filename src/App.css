@@ -12,7 +12,7 @@ html {
 
 /* MAIN */
 
-.main {
+.main-wrapper {
   min-height: 100vh;
   overflow: hidden;
   display: block;
@@ -29,23 +29,11 @@ html {
   margin-bottom: 20px;
 }
 
-
-/* HAMBURGER */
-
-.drawer-control svg {
-  padding-left: 8px;
-  width: 33px;
-  fill: #02b3e4;
-}
-
-
- /* PROJECT PRESENTATION */
-
-.main-wrapper {
+.main {
   margin: 2px 7px 0;
 }
 
-.main-wrapper .main-content {
+.main .main-content {
   border: 7px double #f5feff78;
   margin: 0 0 10px;
   max-height: 98%;
@@ -53,13 +41,19 @@ html {
 
 /** VIDEO **/
 
-.main-wrapper .main-content iframe {
+.main .main-content iframe {
   width: 100%;
 	display: block;
 }
 
 
-/* HAMBURGER PROJECTS SLIDER */
+/* MENU */
+
+.drawer-control svg {
+  padding-left: 8px;
+  width: 33px;
+  fill: #02b3e4;
+}
 
 #menu {
   margin-top: 2px; 
@@ -90,11 +84,11 @@ html {
 
 .carousel .carousel-inner {
   overflow: hidden;
-  padding: 5px 2px 5px 1px;
+  padding: 5px 3px 5px 1px;
   display: block;
 }
 
-/**  PROJECT IMAGE  **/
+/** PROJECT IMAGE **/
 
 .carousel .carousel-inner .project-image {
   width: 100%;
@@ -108,7 +102,7 @@ html {
   transform: scale(0.99);
 } 
 
-/**  CONTROLS PROJECTS SLIDER **/
+/** CONTROLS **/
 
 .carousel .carousel-inner .previous,
 .carousel .carousel-inner .next {
@@ -130,15 +124,17 @@ html {
 }
 
 
-/* PROJECT DESCRIPTION*/
+/* PROJECT DESCRIPTION */
 
-.project-description {
+.project-presentation {
   background-color: #eee;
   border-bottom-right-radius: 80px;
   border: 7px double #f5feff78; 
 }
 
-.project-description .icons-wrapper .icon {
+/** WEB TECHNOLOGIES **/
+
+.project-presentation .icons-wrapper .icon {
   color: #fdb28a;
   display: inline-block; 
   font-size: 41px;
@@ -146,34 +142,38 @@ html {
   margin: 7px 5px 0 10px;
 }
 
-.project-description .description {
+/** TITLE AND LINK **/
+
+.project-presentation .project-description {
   height: fit-content;
 }
 
-.description .description-header {
+.project-description .title-and-link {
   display: flex;
   flex-direction: row;
 }
 
-.description .description-header a {
+.project-description .title-and-link .github-repo {
   font-size: 17px;
   text-decoration: none;
   color: #388dee;
   margin: 18px 0 0 25px;
 }
 
-.description .description-header a:hover {
+.project-description .title-and-link .github-repo:hover {
   font-size: 18px;
 }
 
-.project-description .description h1 {
+.project-presentation .project-description .project-title {
   font-size: 22px;
   color: #464646;
   margin: 10px 0 0 10px;
   font-weight: 900;
 }
 
-.project-description .description p {
+/** DESCRIPTION **/
+
+.project-presentation .project-description .description {
   margin: 3px 2px 5px 10px;
   font-size: 15.5px;
   font-weight: 600;
@@ -185,6 +185,65 @@ html {
   margin-right: 1.28em;
 }
 
+
+/* SHORT BIO */
+
+.aboutMe-wrapper {
+  background-color: #eee;
+  display: flex;
+  flex-direction: row;
+}
+
+.orange-line {
+  border: 2px solid #fdb28a;
+  margin: 13px 0 0;
+} 
+
+/** AUTOR'S PHOTO **/
+
+.aboutMe-wrapper .image-box {
+  margin: 13px 27px 10px 10px;
+}
+
+.image-box .author {
+  border-radius: 27px;
+  box-shadow: 10px 10px 11px -4px #808080;
+  max-width: 100%;
+}
+
+/** INFORMATION **/
+
+.self-introduce {
+  color: #464646;
+  font-size: 23px;
+  letter-spacing: 0.7px;
+  margin-top: 0;
+}
+
+.personal-item-title {
+  color: #464646;
+  margin: 12px 0 1px;
+  font-size: 17px;
+}
+
+.personal-item {
+  color: #757474;
+  margin: 4px 0 10px;
+  font-size: 15px;
+}
+
+.personal-item .title-link {
+  color: #757474;
+  padding: 10px 4px 0 0;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.personal-item .title-link:hover {
+  color: #388dee;
+}
+
+
 /* FOOTER */
 
 .footer {
@@ -194,7 +253,6 @@ html {
   font-size: 13px;
   border: none;
   background-color: #2b3946;
-  /* #0b2233; */
   position: absolute;
   bottom: 0;
 }
@@ -202,66 +260,4 @@ html {
 .footer p {
   margin: 0;
   color: #eaeaeb; 
-}
-
-
-/* ABOUT ME */
-
-.aboutMe-wrapper {
-  background-color: #eee;
-  display: flex;
-  flex-direction: row;
-}
-
-.aboutMe-content {
-  word-break: break-all;
-}
-
- .aboutMe-content hr {
-  border: 2px solid #fdb28a;
-  margin: 13px 0 0;
-} 
-
-/** IMAGE ABOUT ME **/
-
-.aboutMe-wrapper .aboutMe-img {
-  margin: 13px 27px 10px 10px;
-}
-
-.aboutMe-img img {
-  border-radius: 27px;
-  box-shadow: 10px 10px 11px -4px #808080;
-  max-width: 100%;
-}
-
-/** CONTENT ABOUT ME **/
-
-.aboutMe-content h2 {
-  color: #464646;
-  font-size: 23px;
-  letter-spacing: 0.7px;
-  margin-top: 0;
-}
-
-.aboutMe-content h3 {
-  color: #464646;
-  margin: 12px 0 1px;
-  font-size: 17px;
-}
-
-.aboutMe-content p {
-  color: #757474;
-  margin: 4px 0 10px;
-  font-size: 15px;
-}
-
-.aboutMe-content a {
-  color: #757474;
-  padding: 10px 4px 0 0;
-  font-size: 15px;
-  text-decoration: none;
-}
-
-.aboutMe-content a:hover {
-  color: #388dee;
 }
