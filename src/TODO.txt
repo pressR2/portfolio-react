@@ -1,12 +1,10 @@
 
 add video to feed reader testing
-add README.md to animal card and this project
-add ARIA,
-fix semantics,
-css: change fonts size,
+add README.md,
+fix ARIA,
 hosting,
 add comments to code,
-clean code
+clean code,
 extra:
-prevent double click,
-add icons to aboutMe.js
+file structure
+ensure return to the actual project from github pages
