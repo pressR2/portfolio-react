@@ -9,6 +9,11 @@ class FeaturedWork extends React.Component {
     super(props);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
+    this.test = this.test.bind(this);
+  }
+
+  state = {
+    projectIndex: 2
   }
 
   next() {
@@ -19,18 +24,26 @@ class FeaturedWork extends React.Component {
     this.slider.slickPrev();
   }
 
+  test() {
+    this.next();
+  }
+
   render() {
     let selectProject = this.props.selectProject;
     let currentProject = this.props.currentProject;
     let imagesContext = this.props.pics;
     let numberOfProjects = this.props.projects;
+    let lastDisplayIndex = this.state.projectIndex;
+    let test = this.test;
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
       draggable: false,
       vertical: true,
       arrows: false,
-      accessibility: true
+      accessibility: true,
+      afterChange: (index) => this.setState({projectIndex: index + 2
+      })
     };
     return (
       <section
@@ -53,12 +66,18 @@ class FeaturedWork extends React.Component {
                 let projectIndex = index;
                 let imageUrl = imagesContext(project.image);
                 let imageClass = "project-image";
+                
                 if (project === currentProject) {
                   imageClass = "project-image select-project";
                 }
-                return (
+                let focus=() => {};
+                if (lastDisplayIndex === index) {
+                  focus = test;
+                }
+
+                return ( 
                   <div key={project.image} role="group" aria-roledescription="slide" aria-label={`${projectIndex + 1} of ${numberOfProjects.length}`} >
-                    <img tabIndex={projectIndex + 2}
+                    <img tabIndex={projectIndex + 2} onBlur={focus}
                       className={imageClass}
                       src={imageUrl}
                       alt={project.description[0]}
