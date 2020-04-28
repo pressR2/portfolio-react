@@ -68,9 +68,14 @@ html {
   border-radius: 27px;
 }
 
-#menu.open {
+#menu.visible {
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
+}
+
+.menu {
+  width: 296px;
+  margin-right: auto;
 }
 
 
@@ -199,7 +204,7 @@ html {
   margin: 13px 0 0;
 } 
 
-/** AUTOR'S PHOTO **/
+/** AUTHOR'S PHOTO **/
 
 .aboutMe-wrapper .image-box {
   margin: 13px 27px 10px 10px;
