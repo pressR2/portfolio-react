@@ -15,11 +15,10 @@ class ProjectsWebTechnologies extends React.Component {
       <div aria-label="Project presentation" className="project-presentation">
         <div aria-label="Project web technologies" className="icons-wrapper">
           {this.props.webTechnologies.map(function (icons) {
-            // console.log(typeof(icons));
-            let iconText = icons.split("-");
+            let iconText = icons.split("-")[1];
             return (
               <div className="icon" key={icons}>
-                <i className={icons} aria-label={iconText[1]}></i>
+                <i className={icons} aria-label={iconText}></i>
               </div>
             );
           })}
