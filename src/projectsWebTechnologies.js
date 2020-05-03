@@ -4,7 +4,7 @@ class ProjectsWebTechnologies extends React.Component {
   render() {
     let linkText = "github";
     let githubLink = (
-      <a className="github-repo" href={this.props.gitHubLink}>
+      <a className="github-repo" href={this.props.gitHubLink} target="_blank">
         {linkText}
       </a>
     );
