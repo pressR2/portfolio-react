@@ -9,7 +9,7 @@ class FeaturedWork extends React.Component {
     super(props);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
-    this.test = this.test.bind(this);
+    this.sliderNext = this.sliderNext.bind(this);
   }
 
   state = {
@@ -24,7 +24,7 @@ class FeaturedWork extends React.Component {
     this.slider.slickPrev();
   }
 
-  test() {
+  sliderNext() {
     this.next();
   }
 
@@ -34,7 +34,7 @@ class FeaturedWork extends React.Component {
     let imagesContext = this.props.pics;
     let numberOfProjects = this.props.projects;
     let lastDisplayIndex = this.state.projectIndex;
-    let test = this.test;
+    let sliderNext = this.sliderNext;
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -70,9 +70,10 @@ class FeaturedWork extends React.Component {
                 if (project === currentProject) {
                   imageClass = "project-image select-project";
                 }
+                
                 let focus=() => {};
                 if (lastDisplayIndex === index) {
-                  focus = test;
+                  focus = sliderNext;
                 }
 
                 return ( 
