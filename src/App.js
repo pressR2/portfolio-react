@@ -3,7 +3,7 @@ import "./App.css";
 import "./AppResponsive.css";
 import FeaturedWork from "./featuredWork";
 import * as data from "./date.json";
-import ProjectsWebTechnologies from "./projectsWebTechnologies";
+import ProjectsDescription from "./projectsDescription";
 import ProjectsPresentation from "./projectsPresentation";
 import AboutMe from "./aboutMe.js";
 import Hamburger from "./hamburger.js";
@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   render() {
-    let menuClass = this.state.menuHasClass ? "open" : "close";
+    let menuClass = this.state.menuHasClass ? "visible" : "";
     let contentToDisplay = (
       <ProjectsPresentation selectVideo={this.state.project.video} />
     );
@@ -54,7 +54,7 @@ class App extends Component {
           <main className="main">
             <section>
               <div className="main-content">{contentToDisplay}</div>
-              <ProjectsWebTechnologies
+              <ProjectsDescription
                 webTechnologies={this.state.project.webIcons}
                 gitHubLink={this.state.project.gitHubLink}
                 selectDescription={this.state.project.description}
