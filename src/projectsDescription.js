@@ -1,6 +1,6 @@
 import React from "react";
 
-class ProjectsWebTechnologies extends React.Component {
+class ProjectsDescription extends React.Component {
   render() {
     let linkText = "github";
     let githubLink = (
@@ -35,4 +35,4 @@ class ProjectsWebTechnologies extends React.Component {
   }
 }
 
-export default ProjectsWebTechnologies;
+export default ProjectsDescription;
