@@ -121,10 +121,6 @@ html {
 } 
 
 .carousel .carousel-inner .next {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
@@ -144,7 +140,7 @@ html {
   display: inline-block; 
   font-size: 41px;
   height: 50px;
-  margin: 7px 5px 0 10px;
+  margin: 7px 5px 0 7px;
 }
 
 /** TITLE AND LINK **/
@@ -187,7 +183,6 @@ html {
   line-height: 1.4;
   overflow-wrap: break-word;
   max-width: 92%;
-  margin-right: 1.28em;
 }
 
 
@@ -234,13 +229,13 @@ html {
 .personal-item {
   color: #757474;
   margin: 4px 0 10px;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .personal-item .title-link {
   color: #757474;
   padding: 10px 4px 0 0;
-  font-size: 15px;
+  font-size: 16px;
   text-decoration: none;
 }
 

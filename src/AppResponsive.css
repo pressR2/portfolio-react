@@ -38,6 +38,14 @@
     .personal-item .title-link {
       color: #000;
     }
+
+    .self-introduce {
+      margin-left: 15px;
+    }
+
+    .personal-information {
+      word-break: break-all;
+    }
   
     .project-description .title-and-link .github-repo {
       margin-top: 15px;
@@ -51,10 +59,6 @@
       flex-direction: column;
       width: 100%;
     }
-  
-    /* .personal-information {
-      word-break: normal;
-    } */
   
     .project-descripion .icons-wrapper {
       display: flex;
