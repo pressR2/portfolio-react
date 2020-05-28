@@ -6,49 +6,49 @@
         "video": ""
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark"],
-        "image": "./responsive-old-portfolio-site.png",
+        "image": "./responsive-old-portfolio-site2.png",
         "description": ["Previous responsive portfolio site", "Simple functional webpage translated from a design prototype."],
         "gitHubLink": "https://github.com/pressR2/pressR2.github.io.git",
         "video": "l3pdOU17Ayo"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-jquery-plain-wordmark"],
-        "image": "./pixel-art-maker.png",
+        "image": "./pixel-art-maker2.png",
         "description": ["Pixel Art Maker", "A single-page web app where the user can create artistic designs."],
         "gitHubLink": "https://github.com/pressR2/pressR2.github.io/tree/master/pixel_art_maker",
         "video": "-TwYf7yi-_E"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-jquery-plain-wordmark"],
-        "image": "./memory-game.png",
+        "image": "./memory-game2.png",
         "description": ["Memory Game", "Complete browser-based card matching game."],
         "gitHubLink": "https://github.com/pressR2/MemoryGame",
         "video": "3VYCJz1jek0"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain"],
-        "image": "./restaurant-reviews-app.png",
+        "image": "./restaurant-reviews-app2.png",
         "description": ["Restaurant Reviews App", "Fully responsive web application with accessibility standards. This app also caches some assets for offline use."],
         "gitHubLink": "https://github.com/pressR2/RestaurantApp",
         "video": "gk-LIsFClII"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain"],
-        "image": "./arcade-game.PNG",
+        "image": "./arcade-game2.png",
         "description": ["Classic Arcade Game Clone", "A frogger clone game on canvas, with keyboard input and is implemented using JavaScript object-oriented programming features."],
         "gitHubLink": "https://github.com/pressR2/ArcadeGame",
         "video": "qq_XZEKEb44"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-react-original-wordmark"],
-        "image": "./my-reads.png",
+        "image": "./my-reads2.png",
         "description": ["MyReads: A Book Tracking App", "A web application that allows to select and categorize books user have read, are currently reading, or want to read."],
         "gitHubLink": "https://github.com/pressR2/MyReads",
         "video": "acMK0taLZNM"
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-jasmine-plain-wordmark"],
-        "image": "./feed-reader-testing.png",
+        "image": "./feed-reader-testing2.png",
         "description": ["Feed Reader Testing", "A web-based application that loads and displays RSS feeds."],
         "gitHubLink": "https://github.com/pressR2/FeedReaderTesting",
-        "video": "HB0w4aiD5IY"
+        "video": ""
     },
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-react-original-wordmark"],
-        "image": "./neighborhood-map.png",
+        "image": "./neighborhood-map2.png",
         "description": ["Neighborhood Map", "A single page map application uses the Google Maps API. Integrates a third-party data API with accessibility standards and some usability offline."],
         "gitHubLink": "https://github.com/pressR2/NeighborhoodMap",
         "video": "mr16Xy4a62o"

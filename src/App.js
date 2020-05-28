@@ -8,6 +8,7 @@ import ProjectsPresentation from "./projectsPresentation";
 import AboutMe from "./aboutMe.js";
 import Hamburger from "./hamburger.js";
 import MediaQuery from "react-responsive";
+import FeedReader from "./feedReader.js"
 
 const images = require.context("../image", true);
 
@@ -39,7 +40,9 @@ class App extends Component {
       <ProjectsPresentation selectVideo={this.state.project.video} />
     );
 
-    if (this.state.project.video === "") {
+    if (this.state.project === data.projects[7]) {
+      contentToDisplay = <FeedReader/>
+    } else if (this.state.project === data.projects[0]) {
       contentToDisplay = <AboutMe />;
     }
 
