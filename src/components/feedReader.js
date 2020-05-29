@@ -1,5 +1,5 @@
 import React from "react";
-import FeedReaderTests from "./feed-reader-screenshot.png";
+import FeedReaderTests from "../images/feed-reader-screenshot.png";
 
 class FeedReader extends React.Component {
   render() {

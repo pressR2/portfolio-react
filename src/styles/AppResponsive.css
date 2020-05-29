@@ -103,20 +103,20 @@
     .main {
       width: 1000px;
       max-width: 68%;
-      margin: 40px 11px 23px 0;
+      margin: 40px 50px 23px 0;
       margin-left: auto;
       order: 0;
     }
 
     .carousel {
-      margin-top: 25px;
+      margin-top: 16px;
     }
   }
   
   
   @media only screen and (min-width: 1022px) { 
     .self-introduce {
-      font-size: 24px;
+      font-size: 28px;
     }
   
     .project-presentation .icons-wrapper .icon {

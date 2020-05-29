@@ -106,7 +106,7 @@ class FeaturedWork extends React.Component {
             aria-label="Next Slide"
             tabIndex={11}
           >
-            <Chevron />
+           <Chevron /> 
           </button>
         </div>
       </section>

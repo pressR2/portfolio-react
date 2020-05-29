@@ -6,7 +6,7 @@ html {
   width: 100%;
   height: 100%;
   font-family: 'Poppins', sans-serif;
-  background-color: #d3d1d1;
+  background-color: white;
 }
 
 
@@ -34,7 +34,7 @@ html {
 }
 
 .main .main-content {
-  border: 7px double #f5feff78;
+  /* border: 7px double #f5feff78; */
   margin: 0 0 10px;
   max-height: 98%;
 }
@@ -69,12 +69,11 @@ html {
 }
 
 #menu.visible {
-  -webkit-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 
 .menu {
-  width: 296px;
+  width: 300px;
   margin-right: auto;
 }
 
@@ -82,40 +81,47 @@ html {
 /* PROJECTS SLIDER */
 
 .carousel {
-  border: 7px double #f5feff78;
-  border-radius: 27px;
+  /* border: 7px double #f5feff78; */
+  /* border-radius: 27px; */
   display: block;
 }
 
 .carousel .carousel-inner {
   overflow: hidden;
-  padding: 5px 3px 5px 1px;
+  padding: 5px 2px 5px 1px;
   display: block;
+  /* background-color: #2b3946; */
+  /* border-radius: 20px; */
 }
 
 /** PROJECT IMAGE **/
 
 .carousel .carousel-inner .project-image {
   width: 100%;
-  padding: 0;
+  /* padding: 2px; */
+  border-radius: 0;
+  /* border-bottom-left-radius:40px; */
+  /* border: solid 1px rgb(129, 118, 118); */
+  /* box-shadow: 8px 8px 8px -6px #808080; */
+  box-shadow: 0 10px 6px -6px #777;
   display: block;
   transform: scale(0.92);
   transition: transform 200ms ease-in;
 }
 
 .carousel .carousel-inner .select-project {
-  transform: scale(0.99);
+  transform: scale(0.98);
 } 
 
 /** CONTROLS **/
 
 .carousel .carousel-inner .previous,
 .carousel .carousel-inner .next {
-  width: 46px;
+  width: 48px;
   display: block;
   margin: 0 auto;
   cursor: pointer;
-  fill: #2b3946;
+  fill: #e9c893;
   background-color: transparent;
   border: none;
 } 
@@ -126,17 +132,17 @@ html {
 
 
 /* PROJECT DESCRIPTION */
-
+/* 
 .project-presentation {
   background-color: #eee;
   border-bottom-right-radius: 80px;
   border: 7px double #f5feff78; 
-}
+} */
 
 /** WEB TECHNOLOGIES **/
 
 .project-presentation .icons-wrapper .icon {
-  color: #fdb28a;
+  color: #fdb88a;
   display: inline-block; 
   font-size: 41px;
   height: 50px;
@@ -189,7 +195,7 @@ html {
 /* SHORT BIO */
 
 .aboutMe-wrapper {
-  background-color: #eee;
+  /* background-color: #eee; */
   display: flex;
   flex-direction: row;
 }
@@ -243,6 +249,11 @@ html {
   color: #388dee;
 }
 
+/* FEED READER SCREEN SHOT */
+
+.feed-reader-screenShot {
+  width: 100%;
+}
 
 /* FOOTER */
 

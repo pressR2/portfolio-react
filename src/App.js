@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import "./App.css";
-import "./AppResponsive.css";
-import FeaturedWork from "./featuredWork";
 import * as data from "./date.json";
-import ProjectsDescription from "./projectsDescription";
-import ProjectsPresentation from "./projectsPresentation";
-import AboutMe from "./aboutMe.js";
-import Hamburger from "./hamburger.js";
 import MediaQuery from "react-responsive";
-import FeedReader from "./feedReader.js"
+import FeaturedWork from "./components/featuredWork";
+import ProjectsDescription from "./components/projectsDescription";
+import ProjectsPresentation from "./components/projectsPresentation";
+import AboutMe from "./components/aboutMe.js";
+import Hamburger from "./components/hamburger.js";
+import FeedReader from "./components/feedReader.js"
+import "./styles/App.css";
+import "./styles/AppResponsive.css";
 
-const images = require.context("../image", true);
+const images = require.context("../images", true);
 
 class App extends Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class App extends Component {
     );
 
     if (this.state.project === data.projects[7]) {
-      contentToDisplay = <FeedReader/>
+      contentToDisplay = <FeedReader />
     } else if (this.state.project === data.projects[0]) {
       contentToDisplay = <AboutMe />;
     }
