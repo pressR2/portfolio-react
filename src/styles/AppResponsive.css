@@ -102,30 +102,41 @@
   @media only screen and (min-width: 974px) {
     .main {
       width: 1000px;
-      max-width: 68%;
-      margin: 40px 50px 23px 0;
-      margin-left: auto;
-      order: 0;
+      max-width: 67%;
+      /* margin: 40px 50px 23px 18px; */
+      /* margin-left: auto; */
+      /* order: 0; */
     }
 
     .carousel {
       margin-top: 16px;
+      max-width: 95%;
     }
   }
   
+  @media only screen and (min-width: 974px) and (max-width: 1021px) {
+    .main {
+      margin: 40px 50px 23px 18px; 
+    }
+  }
+
   
-  @media only screen and (min-width: 1022px) { 
+  @media only screen and (min-width: 1022px) {
+    .main {
+      margin-left: auto;
+    }
+    
     .self-introduce {
       font-size: 28px;
     }
   
     .project-presentation .icons-wrapper .icon {
-      font-size: 54px;
+      font-size: 58px;
       margin-right: 11px;
     }
     
     .project-presentation .project-description .project-title {
-      font-size: 24px;
+      font-size: 25px;
     }
     
     .project-presentation .project-description .description {
