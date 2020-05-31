@@ -10,10 +10,13 @@ class FeaturedWork extends React.Component {
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
     this.sliderNext = this.sliderNext.bind(this);
+    this.hoverOn = this.hoverOn.bind(this);
+    this.hoverOut = this.hoverOut.bind(this);
   }
 
   state = {
-    projectIndex: 2
+    projectIndex: 2,
+    hoveringElem: {},
   }
 
   next() {
@@ -28,6 +31,18 @@ class FeaturedWork extends React.Component {
     this.next();
   }
 
+  hoverOn(project) {
+    this.setState({
+      hoveringElem: project
+    });
+  }
+
+  hoverOut() {
+    this.setState({
+      hoveringElem: {}
+    });
+  }
+
   render() {
     let selectProject = this.props.selectProject;
     let currentProject = this.props.currentProject;
@@ -35,6 +50,9 @@ class FeaturedWork extends React.Component {
     let numberOfProjects = this.props.projects;
     let lastDisplayIndex = this.state.projectIndex;
     let sliderNext = this.sliderNext;
+    let hoverOn = this.hoverOn;
+    let hoverOut = this.hoverOut;
+    let hoveringElem = this.state.hoveringElem;
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -65,7 +83,14 @@ class FeaturedWork extends React.Component {
               {this.props.projects.map(function (project, index) {
                 let projectIndex = index;
                 let imageUrl = imagesContext(project.image);
+                let imageOnHoverURL = imagesContext(project.imageOnHover);
+                  // console.log(imageOnHoverURL);
                 let imageClass = "project-image";
+                
+                if (project === hoveringElem) {
+                //  console.log("ten");
+                   imageUrl = imageOnHoverURL;
+                }
                 
                 if (project === currentProject) {
                   imageClass = "project-image select-project";
@@ -82,6 +107,19 @@ class FeaturedWork extends React.Component {
                       className={imageClass}
                       src={imageUrl}
                       alt={project.description[0]}
+
+                      onMouseOut={(function() {
+                        return function() {
+                          hoverOut();
+                        }
+                      })()}
+
+                      onMouseOver={(function(projectOnHover) {
+                        return function() {
+                          hoverOn(projectOnHover);
+                        }
+                      })(project)}
+                      
                       onKeyDown={(function(projectToApply){
                         return function (event) {
                           if (event.keyCode === 13 || event.keyCode === 32) {
@@ -89,6 +127,7 @@ class FeaturedWork extends React.Component {
                           }
                         }
                       })(project)}
+
                       onClick={(function (projectToApply) {
                         return function (event) {
                           selectProject(projectToApply);
