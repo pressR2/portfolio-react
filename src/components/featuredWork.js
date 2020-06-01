@@ -44,15 +44,12 @@ class FeaturedWork extends React.Component {
   }
 
   render() {
-    let selectProject = this.props.selectProject;
-    let currentProject = this.props.currentProject;
-    let imagesContext = this.props.pics;
-    let numberOfProjects = this.props.projects;
-    let lastDisplayIndex = this.state.projectIndex;
+    let pr = this.props;
+    let st = this.state;
     let sliderNext = this.sliderNext;
     let hoverOn = this.hoverOn;
     let hoverOut = this.hoverOut;
-    let hoveringElem = this.state.hoveringElem;
+
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -82,27 +79,25 @@ class FeaturedWork extends React.Component {
             <Slider ref={(c) => (this.slider = c)} {...settings}>
               {this.props.projects.map(function (project, index) {
                 let projectIndex = index;
-                let imageUrl = imagesContext(project.image);
-                let imageOnHoverURL = imagesContext(project.imageOnHover);
-                  // console.log(imageOnHoverURL);
+                let imageUrl = pr.pics(project.image);
+                let imageOnHoverURL = pr.pics(project.imageOnHover);
                 let imageClass = "project-image";
                 
-                if (project === hoveringElem) {
-                //  console.log("ten");
+                if (project === this.state.hoveringElem) {
                    imageUrl = imageOnHoverURL;
                 }
                 
-                if (project === currentProject) {
+                if (project === this.props.currentProject) {
                   imageClass = "project-image select-project";
                 }
                 
                 let focus=() => {};
-                if (lastDisplayIndex === index) {
+                if (st.projectIndex === index) {
                   focus = sliderNext;
                 }
 
                 return ( 
-                  <div key={project.image} role="group" aria-roledescription="slide" aria-label={`${projectIndex + 1} of ${numberOfProjects.length}`} >
+                  <div key={project.image} role="group" aria-roledescription="slide" aria-label={`${projectIndex + 1} of ${pr.projects.length}`} >
                     <img tabIndex={projectIndex + 2} onBlur={focus}
                       className={imageClass}
                       src={imageUrl}
@@ -123,20 +118,20 @@ class FeaturedWork extends React.Component {
                       onKeyDown={(function(projectToApply){
                         return function (event) {
                           if (event.keyCode === 13 || event.keyCode === 32) {
-                            selectProject(projectToApply);
+                            pr.selectProject(projectToApply);
                           }
                         }
                       })(project)}
 
                       onClick={(function (projectToApply) {
                         return function (event) {
-                          selectProject(projectToApply);
+                          pr.selectProject(projectToApply);
                         };
                       })(project)}
                     ></img>
                   </div>
                 );
-              })}
+              }.bind(this))}
             </Slider>
           </div>
           <button
