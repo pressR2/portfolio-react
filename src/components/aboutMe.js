@@ -16,35 +16,37 @@ class AboutMe extends React.Component {
           <h2 className="self-introduce">
             Hi, I'm Marta Drost
           </h2>
-          <div className="icon-and-title">
-            <h3 className="personal-item-title">contact</h3>
-            <div className="title-icon">
-              <img src={mailIcon} alt="mail" />
+          <div className="personal-data">
+            <div className="icon-and-title">
+              <h3 className="personal-item-title">contact</h3>
+              <div className="title-icon">
+                <img src={mailIcon} alt="mail" />
+              </div>
             </div>
-          </div>
-          <p className="personal-item">
-            martadrost@protonmail.com
-          </p>
-          <div className="icon-and-title">
-            <h3 className="personal-item-title">github profile</h3>
-            <div className="title-icon">
-              <img src={gitHubIcon} alt="git hub" />
-            </div>
-          </div>
-          <p className="personal-item">
-            <a className="title-link" href={"https://github.com/pressR2"}>
-              github.com/pressR2
-            </a></p>
-          <div className="icon-and-title">
-            <h3 className="personal-item-title">codewars profile</h3>
-            <div className="title-icon">
-              <img src={codeWIcon} alt="code wars" />
-            </div>
-          </div>
             <p className="personal-item">
-              <a className="title-link" href={"https://www.codewars.com/users/Marta_R2"}>
-                codewars.com/users/Marta_R2
-              </a></p>  
+              martadrost@protonmail.com
+            </p>
+            <div className="icon-and-title">
+              <h3 className="personal-item-title">github profile</h3>
+              <div className="title-icon">
+                <img src={gitHubIcon} alt="git hub" />
+              </div>
+            </div>
+            <p className="personal-item">
+              <a className="title-link" href={"https://github.com/pressR2"}>
+                github.com/pressR2
+              </a></p>
+            <div className="icon-and-title">
+              <h3 className="personal-item-title">codewars profile</h3>
+              <div className="title-icon">
+                <img src={codeWIcon} alt="codewars" />
+              </div>
+            </div>
+              <p className="personal-item">
+                <a className="title-link" href={"https://www.codewars.com/users/Marta_R2"}>
+                  codewars.com/users/Marta_R2
+                </a></p>
+              </div> 
         </section>
       </div>
     );

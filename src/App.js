@@ -6,7 +6,7 @@ import ProjectsDescription from "./components/projectsDescription";
 import ProjectsPresentation from "./components/projectsPresentation";
 import AboutMe from "./components/aboutMe.js";
 import Hamburger from "./components/hamburger.js";
-import FeedReader from "./components/feedReader.js"
+import FeedReader from "./components/feedReader.js";
 import "./styles/App.css";
 import "./styles/AppResponsive.css";
 

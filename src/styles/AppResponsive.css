@@ -20,23 +20,40 @@
       right: 0;
       margin: 0 auto;
       width: 260px;
-      filter: opacity(52%);
+      /* filter: opacity(52%); */
     }
     
     .personal-information {
       z-index: 1;
       margin: 0 auto;
+      margin-top: 175px;
+    }
+
+    .personal-data {
+      margin-top: 200px;
     }
   
     .orange-line {
       border: none;
     }
   
-    .self-introduce,
-    .personal-item-title,
+    .self-introduce {
+      color: #ffa;
+    }
+    .personal-item-title {
+      /* color: rgb(112, 109, 109); */
+    }
+
     .personal-item,
     .personal-item .title-link {
-      color: #000;
+      color: rgb(180, 180, 180);
+    }
+
+    .title-icon img {
+     fill: #e9c893;
+     color: coral;
+     background-color: darkgreen;
+     /* background-color: transparent; */
     }
 
     .self-introduce {
@@ -120,7 +137,7 @@
     }
   
     .project-presentation .icons-wrapper .icon {
-      font-size: 58px;
+      font-size: 60px;
       margin-right: 11px;
     }
     

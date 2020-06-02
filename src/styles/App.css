@@ -219,44 +219,50 @@ html {
 
 .self-introduce {
   color: #464646;
-  font-size: 23px;
+  font-size: 24px;
   letter-spacing: 0.7px;
   margin-top: 0;
 }
 
 .personal-item-title {
   color: #464646;
-  margin: 5px 0 1px;
+  margin: 0 1px;
   font-size: 17px;
 }
 
 .personal-item {
   color: #388dee;
-  margin: 0 0 35px;
-  font-size: 18px;
+  margin: 0 0 15px;
+  font-size: 16px;
 }
 
 .personal-item .title-link {
   color: #388dee;
   padding: 10px 4px 0 0;
-  font-size: 17px;
+  font-size: 16px;
   text-decoration: none;
 }
 
 .personal-item .title-link:hover {
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .icon-and-title {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
 }
 
 .title-icon {
-  width: 35px;
+  width: 25px;
   margin-right: 5px;
+  margin-left: 2px;
   order: -1;
+}
+
+.personal-data {
+  margin-top: 260px;
+  /* background-color: rgba(0,0,0,0.8); */
 }
 
 

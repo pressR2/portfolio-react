@@ -89,6 +89,7 @@ class FeaturedWork extends React.Component {
                 
                 if (project === this.props.currentProject) {
                   imageClass = "project-image select-project";
+                  // imageUrl = imageOnHoverURL;
                 }
                 
                 let focus=() => {};
