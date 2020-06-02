@@ -103,9 +103,8 @@
     .main {
       width: 1000px;
       max-width: 67%;
-      /* margin: 40px 50px 23px 18px; */
-      /* margin-left: auto; */
-      /* order: 0; */
+      margin: 40px 50px 23px 0;
+      padding-left: 27px;
     }
 
     .carousel {
@@ -113,19 +112,9 @@
       max-width: 95%;
     }
   }
-  
-  @media only screen and (min-width: 974px) and (max-width: 1021px) {
-    .main {
-      margin: 40px 50px 23px 18px; 
-    }
-  }
 
   
   @media only screen and (min-width: 1022px) {
-    .main {
-      margin-left: auto;
-    }
-    
     .self-introduce {
       font-size: 28px;
     }
@@ -141,5 +130,11 @@
     
     .project-presentation .project-description .description {
       font-size: 17px;  
+    }
+  }
+
+  @media only screen and (min-width: 1065px) {
+    .main {
+      margin-left: auto;
     }
   }
