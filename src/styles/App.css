@@ -94,7 +94,6 @@ html {
 
 .carousel .carousel-inner .project-image {
   width: 99%;
-  /* padding: 2px; */
   border-radius: 0;
   box-shadow: 0 10px 6px -6px #777;
   display: block;
@@ -194,7 +193,6 @@ html {
 /* SHORT BIO */
 
 .aboutMe-wrapper {
-  /* background-color: #eee; */
   display: flex;
   flex-direction: row;
 }
@@ -214,7 +212,7 @@ html {
 .image-box .author {
   border-radius: 27px;
   box-shadow: 10px 10px 11px -4px #808080;
-  max-width: 100%;
+  width: 100%;
 }
 
 /** INFORMATION **/
@@ -228,13 +226,13 @@ html {
 
 .personal-item-title {
   color: #464646;
-  margin: 12px 0 1px;
+  margin: 5px 0 1px;
   font-size: 17px;
 }
 
 .personal-item {
   color: #388dee;
-  margin: 5px 0 25px;
+  margin: 0 0 35px;
   font-size: 18px;
 }
 
@@ -247,6 +245,18 @@ html {
 
 .personal-item .title-link:hover {
   font-size: 18px;
+}
+
+.icon-and-title {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+}
+
+.title-icon {
+  width: 35px;
+  margin-right: 5px;
+  order: -1;
 }
 
 
