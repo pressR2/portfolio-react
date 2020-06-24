@@ -1,45 +1,29 @@
 /* MEDIA QUERY */
 
-@media only screen and (max-width: 450px) {
-    .main {
-      width: 100%;
-    }
-  
-    .aboutMe-wrapper {
-      height: 485px;
-     }
-  
+
+@media only screen and (max-width: 650px) {
     .aboutMe-wrapper .image-box {
-      margin: 0;
+      margin: 0 auto;
+      margin-top: 20px; 
     }
   
     .image-box .author {
-      position: absolute;
-      top: 54px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      width: 260px;
-      /* filter: opacity(52%); */
+      max-width: 240px;
     }
     
     .personal-information {
-      z-index: 1;
       margin: 0 auto;
-      margin-top: 175px;
+      word-break: break-all;
     }
 
     .personal-data {
-      margin-top: 200px;
+      margin: 20px 0 0 18px;
     }
   
     .orange-line {
       border: none;
     }
   
-    .self-introduce {
-      color: #ffa;
-    }
     .personal-item-title {
       /* color: rgb(112, 109, 109); */
     }
@@ -49,39 +33,24 @@
       color: rgb(180, 180, 180);
     }
 
-    .title-icon img {
-     fill: #e9c893;
-     color: coral;
-     background-color: darkgreen;
-     /* background-color: transparent; */
-    }
-
     .self-introduce {
       margin-left: 15px;
     }
 
-    .personal-information {
-      word-break: break-all;
-    }
-  
     .project-description .title-and-link .github-repo {
       margin-top: 15px;
+    }
+  }
+
+  @media only screen and (min-width: 651px) {
+    .aboutMe-wrapper {
+      flex-direction: row;
     }
   }
   
   
   @media only screen and (min-width: 451px) and (max-width: 973px) {
-    .main {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    .project-descripion .icons-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-     }
-  
+
      .project-description .github-repo {
       margin-top: 15px;
     }
