@@ -127,6 +127,7 @@ class FeaturedWork extends React.Component {
                       onClick={(function (projectToApply) {
                         return function (event) {
                           pr.selectProject(projectToApply);
+                          pr.closeMenu();
                         };
                       })(project)}
                     ></img>

@@ -17,12 +17,17 @@ class App extends Component {
     super(props);
     this.selectProject = this.selectProject.bind(this);
     this.menuHandling = this.menuHandling.bind(this);
+    this.closeMenu= this.closeMenu.bind(this);
   }
 
   state = {
     project: data.projects[0],
     menuHasClass: false,
   };
+
+  closeMenu() {
+    this.setState({ menuHasClass: false});
+  }
 
   menuHandling() {
     this.setState({ menuHasClass: !this.state.menuHasClass });
@@ -50,7 +55,9 @@ class App extends Component {
       <div className="main-wrapper">
         <MediaQuery query="(max-device-width: 973px)">
           <div>
-            <Hamburger menuHandling={this.menuHandling} />
+            <Hamburger
+              menuHandling={this.menuHandling}
+             />
           </div>
         </MediaQuery>
         <div className="flex-content">
@@ -71,6 +78,7 @@ class App extends Component {
                 pics={images}
                 selectProject={this.selectProject}
                 currentProject={this.state.project}
+                closeMenu={this.closeMenu}
               />
             </nav>
           </MediaQuery>
