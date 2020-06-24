@@ -1,16 +1,26 @@
 import React from "react";
+import MediaQuery from "react-responsive";
 import aboutMeImage from "../images/author.png";
 import codeWIcon from "../images/iconfinder_codewars_4691329.svg";
 import gitHubIcon from "../images/github-logo.svg";
 import mailIcon from "../images/mail.svg";
+import aboutMeSmallerImage from "../images/author3.png"
 
 class AboutMe extends React.Component {
   render() {
     return (
       <div className="aboutMe-wrapper">
-        <figure className="image-box">
-          <img className="author" src={aboutMeImage} alt="Author" />
-        </figure>
+        <MediaQuery query="(max-device-width: 650px)">
+            <div className="image-box">
+              <img className="author" src={aboutMeSmallerImage} alt="Author" />
+           </div>
+        </MediaQuery>
+        <MediaQuery query="(min-device-width: 651px)">
+            <div className="image-box">
+              <img className="author" src={aboutMeImage} alt="Author" />
+           </div>
+        </MediaQuery>
+       
         <section aria-label= "Personal information" className="personal-information">
           <hr className="orange-line"></hr>
           <h2 className="self-introduce">
