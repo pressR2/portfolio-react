@@ -9,11 +9,13 @@ class ProjectsPresentation extends React.Component {
       playerVars: { rel: 0 }
     };
     return (
-      <YouTube
-        videoId={this.props.selectVideo}
-        onReady={this._onReady}
-        opts={opts}
-      ></YouTube>
+      <div className="video-wrapper">
+        <YouTube
+          videoId={this.props.selectVideo}
+          onReady={this._onReady}
+          opts={opts}
+        ></YouTube>
+      </div>
     );
   }
 

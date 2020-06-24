@@ -20,6 +20,7 @@ html {
   padding-bottom: 19px;
   box-sizing: border-box;
   margin: 0 auto;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 0 50px rgba(0,0,0,0.1) inset;
 }
 
 .flex-content {
@@ -30,19 +31,32 @@ html {
 }
 
 .main {
+  width: 100%;
   margin: 2px 7px 0;
+  opacity: 50%;
+  filter: blur(5px);
 }
 
 .main .main-content {
   margin: 0 0 17px;
-  max-height: 98%;
 }
 
 /** VIDEO **/
 
-.main .main-content iframe {
+.main-content .video-wrapper {
   width: 100%;
-	display: block;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.main-content iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -50,21 +64,20 @@ html {
 
 .drawer-control svg {
   padding-left: 8px;
+  padding-top: 3px;
   width: 33px;
   fill: #02b3e4;
 }
 
 #menu {
-  margin-top: 2px; 
-  z-index: 2;
-  width: 285px;
-  max-width: 82%;
+  max-width: 220px;
+  width: 100%;
   overflow: auto;
   position: absolute;
-  background-color: #989999;
-  transform: translate(-285px,0);
+  margin-top: 2px; 
+  transform: translate(-220px,0);
   transition: all .2s ease-in-out;
-  border-radius: 27px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 0 50px rgba(0,0,0,0.1);
 }
 
 #menu.visible {
@@ -180,7 +193,7 @@ html {
 
 .project-presentation .project-description .description {
   margin: 3px 2px 5px 10px;
-  font-size: 15.5px;
+  font-size: 15px;
   font-weight: 600;
   color: #757474;
   letter-spacing: 0.5px;
@@ -194,8 +207,8 @@ html {
 
 .aboutMe-wrapper {
   display: flex;
-  flex-direction: row;
-}
+  flex-direction: column;
+} 
 
 .orange-line {
   border: 3px solid #fdb28a;
@@ -210,8 +223,8 @@ html {
 }
 
 .image-box .author {
-  border-radius: 27px;
-  box-shadow: 10px 10px 11px -4px #808080;
+  /* border-radius: 27px; */
+  /* box-shadow: 10px 10px 11px -4px #808080; */
   width: 100%;
 }
 
@@ -233,13 +246,13 @@ html {
 .personal-item {
   color: #388dee;
   margin: 0 0 15px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .personal-item .title-link {
   color: #388dee;
   padding: 10px 4px 0 0;
-  font-size: 16px;
+  font-size: 15px;
   text-decoration: none;
 }
 
@@ -258,11 +271,6 @@ html {
   margin-right: 5px;
   margin-left: 2px;
   order: -1;
-}
-
-.personal-data {
-  margin-top: 260px;
-  /* background-color: rgba(0,0,0,0.8); */
 }
 
 
