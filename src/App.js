@@ -40,6 +40,7 @@ class App extends Component {
   }
 
   render() {
+    let menuBlur = this.state.menuHasClass ? "main blur" :"main";
     let menuClass = this.state.menuHasClass ? "visible" : "";
     let contentToDisplay = (
       <ProjectsPresentation selectVideo={this.state.project.video} />
@@ -61,7 +62,7 @@ class App extends Component {
           </div>
         </MediaQuery>
         <div className="flex-content">
-          <main className="main">
+          <main className={menuBlur}>
             <section>
               <div className="main-content">{contentToDisplay}</div>
               <ProjectsDescription
@@ -89,6 +90,7 @@ class App extends Component {
                 pics={images}
                 selectProject={this.selectProject}
                 currentProject={this.state.project}
+                closeMenu={this.closeMenu}
               />
             </nav>
           </MediaQuery>

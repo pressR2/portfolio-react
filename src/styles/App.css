@@ -30,11 +30,16 @@ html {
   margin-bottom: 20px;
 }
 
-.main {
-  width: 100%;
+.main.blur {
   margin: 2px 7px 0;
   opacity: 50%;
   filter: blur(5px);
+}
+
+.main {
+  margin: 2px 7px 0;
+  opacity: unset;
+  filter: none;
 }
 
 .main .main-content {
@@ -211,9 +216,8 @@ html {
 } 
 
 .orange-line {
-  border: 3px solid #fdb28a;
+  border: 2px solid #fdb28a;
   margin: 13px 0 0;
-  border-radius: 50%;
 } 
 
 /** AUTHOR'S PHOTO **/
