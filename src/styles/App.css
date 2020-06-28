@@ -20,7 +20,7 @@ html {
   padding-bottom: 19px;
   box-sizing: border-box;
   margin: 0 auto;
-  box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 0 50px rgba(0,0,0,0.1) inset;
+  box-shadow: 0 1px 5px #00000040, 0 0 50px #0000001a inset;
 }
 
 .flex-content {
@@ -31,7 +31,6 @@ html {
 }
 
 .main.blur {
-  margin: 2px 7px 0;
   opacity: 50%;
   filter: blur(5px);
 }
@@ -75,12 +74,12 @@ html {
 }
 
 #menu {
-  max-width: 220px;
+  max-width: 170px;
   width: 100%;
   overflow: auto;
   position: absolute;
   margin-top: 2px; 
-  transform: translate(-220px,0);
+  transform: translate(-180px,0);
   transition: all .2s ease-in-out;
   box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 0 50px rgba(0,0,0,0.1);
 }
@@ -105,7 +104,6 @@ html {
   overflow: hidden;
   padding: 5px 2px 5px 1px;
   display: block;
-  /* background-color: #2b3946; */
 }
 
 /** PROJECT IMAGE **/
@@ -148,12 +146,11 @@ html {
 
 
 /* PROJECT DESCRIPTION */
-/* 
+
 .project-presentation {
-  background-color: #eee;
-  border-bottom-right-radius: 80px;
-  border: 7px double #f5feff78; 
-} */
+  margin-bottom: 55px;
+  width: 100%;
+} 
 
 /** WEB TECHNOLOGIES **/
 
@@ -173,7 +170,7 @@ html {
 
 .project-description .title-and-link {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .project-description .title-and-link .github-repo {
@@ -188,10 +185,11 @@ html {
 }
 
 .project-presentation .project-description .project-title {
-  font-size: 22px;
+  font-size: 20px;
   color: #464646;
   margin: 10px 10px 0;
   font-weight: 900;
+  width: 65%;
 }
 
 /** DESCRIPTION **/
@@ -261,7 +259,7 @@ html {
 }
 
 .personal-item .title-link:hover {
-  font-size: 17px;
+  color: #469cff;
 }
 
 .icon-and-title {

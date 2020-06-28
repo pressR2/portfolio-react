@@ -1,5 +1,20 @@
 /* MEDIA QUERY */
 
+@media only screen and (min-width: 360px) and (max-width: 569px) {
+  #menu {
+    max-width: 200px;
+    transform: translate(-210px,0);
+  }
+}
+
+
+@media only screen and (min-width: 570px) and (max-width: 973px) {
+  #menu {
+    max-width: 215px;
+    transform: translate(-225px,0);
+  }
+}
+
 
 @media only screen and (max-width: 650px) {
     .aboutMe-wrapper .image-box {
@@ -24,10 +39,6 @@
       border: none;
     }
   
-    .personal-item-title {
-      /* color: rgb(112, 109, 109); */
-    }
-
     .personal-item,
     .personal-item .title-link {
       color: rgb(180, 180, 180);
@@ -45,14 +56,14 @@
   @media only screen and (min-width: 651px) {
     .aboutMe-wrapper {
       flex-direction: row;
+      padding-bottom: 15%;
     }
   }
   
   
   @media only screen and (min-width: 451px) and (max-width: 973px) {
-
      .project-description .github-repo {
-      margin-top: 15px;
+        margin-top: 15px;
     }
   }
   
@@ -84,6 +95,7 @@
     }
   }
 
+
   @media only screen and (max-width: 973px) { 
     .main {
       width: 100%;
@@ -102,6 +114,14 @@
     .carousel {
       margin-top: 16px;
       max-width: 95%;
+    }
+
+    .main-content .video-wrapper {
+      padding-bottom: 49.7%;
+    }
+
+    .project-presentation {
+      margin-bottom: 20px;
     }
   }
 
@@ -124,9 +144,11 @@
       font-size: 17px;  
     }
   }
+  
 
   @media only screen and (min-width: 1065px) {
-    .main {
+    .main,
+    .main.blur {
       margin-left: auto;
     }
   }
