@@ -1,7 +1,7 @@
 /* MEDIA QUERY */
 
 @media only screen and (min-width: 360px) and (max-width: 569px) {
-  #menu {
+  .menu-mobile {
     max-width: 200px;
     transform: translate(-210px,0);
   }
@@ -9,7 +9,7 @@
 
 
 @media only screen and (min-width: 570px) and (max-width: 973px) {
-  #menu {
+  .menu-mobile {
     max-width: 215px;
     transform: translate(-225px,0);
   }
@@ -17,12 +17,12 @@
 
 
 @media only screen and (max-width: 650px) {
-    .aboutMe-wrapper .image-box {
+    .author-image-box {
       margin: 0 auto;
       margin-top: 20px; 
     }
   
-    .image-box .author {
+    .author-pic {
       max-width: 240px;
     }
     
@@ -40,57 +40,59 @@
     }
   
     .personal-item,
-    .personal-item .title-link {
+    .personal-item-link {
       color: rgb(180, 180, 180);
     }
 
-    .self-introduce {
+    .project-title {
+      width: 65%;
+    }
+
+    .author-name {
       margin-left: 15px;
     }
 
-    .project-description .title-and-link .github-repo {
-      margin-top: 15px;
+    .github-repo {
+      margin-top: 11px;
     }
   }
 
+
   @media only screen and (min-width: 651px) {
-    .aboutMe-wrapper {
+    .author-wrapper {
       flex-direction: row;
       padding-bottom: 15%;
     }
   }
   
   
-  @media only screen and (min-width: 451px) and (max-width: 973px) {
-     .project-description .github-repo {
-        margin-top: 15px;
-    }
-  }
-  
-  
   @media only screen and (min-width: 640px) and (max-width: 901px) {
-    .project-presentation .icons-wrapper .icon {
+    .web-technologies-icon {
       font-size: 50px;
       margin-right: 8px;
     }
+
+    .github-repo {
+      margin-top: 13px;
+    }
   }
   
   
-  @media only screen and (min-width: 902px) and (max-width: 1022px) {
-    .self-introduce {
+  @media only screen and (min-width: 902px) and (max-width: 1021px) {
+    .author-name {
       font-size: 24px;
     }
    
-    .project-presentation .icons-wrapper .icon {
+    .web-technologies-icon {
       font-size: 52px;
       margin-right: 10px;
     }
     
-    .project-presentation .project-description .project-title {
+    .project-title {
       font-size: 24px;
     }
     
-    .project-presentation .project-description .description {
+    .project-description {
       font-size: 16px;  
     }
   }
@@ -116,7 +118,7 @@
       max-width: 95%;
     }
 
-    .main-content .video-wrapper {
+    .video-wrapper {
       padding-bottom: 49.7%;
     }
 
@@ -127,24 +129,24 @@
 
   
   @media only screen and (min-width: 1022px) {
-    .self-introduce {
+    .author-name {
       font-size: 28px;
     }
   
-    .project-presentation .icons-wrapper .icon {
+    .web-technologies-icon {
       font-size: 60px;
       margin-right: 11px;
     }
     
-    .project-presentation .project-description .project-title {
+    .project-title {
       font-size: 25px;
     }
     
-    .project-presentation .project-description .description {
+    .project-description {
       font-size: 17px;  
     }
   }
-  
+
 
   @media only screen and (min-width: 1065px) {
     .main,

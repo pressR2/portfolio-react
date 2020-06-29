@@ -17,18 +17,18 @@ class ProjectsDescription extends React.Component {
           {this.props.webTechnologies.map(function (icons) {
             let iconText = icons.split("-")[1];
             return (
-              <div className="icon" key={icons}>
+              <div className="web-technologies-icon" key={icons}>
                 <i className={icons} aria-label={iconText}></i>
               </div>
             );
           })}
         </div>
-        <article aria-label="Project description" className="project-description">
+        <article aria-label="Project description" className="project-description-area">
           <header className="title-and-link">
             <h1 className="project-title">{this.props.selectDescription[0]}</h1>
             {githubLink}
           </header>
-          <p className="description">{this.props.selectDescription[1]}</p>
+          <p className="project-description">{this.props.selectDescription[1]}</p>
         </article>
       </div>
     );

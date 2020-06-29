@@ -68,7 +68,7 @@ class FeaturedWork extends React.Component {
       >
         <div className="carousel-inner">
           <button
-            className="previous"
+            className="previous-slide"
             onClick={this.previous}
             aria-label="Previous Slide"
             tabIndex={1}
@@ -88,7 +88,7 @@ class FeaturedWork extends React.Component {
                 }
                 
                 if (project === this.props.currentProject) {
-                  imageClass = "project-image select-project";
+                  imageClass = "project-image project-image-selected";
                   // imageUrl = imageOnHoverURL;
                 }
                 
@@ -137,7 +137,7 @@ class FeaturedWork extends React.Component {
             </Slider>
           </div>
           <button
-            className="next"
+            className="next-slide"
             onClick={this.next}
             aria-label="Next Slide"
             tabIndex={11}

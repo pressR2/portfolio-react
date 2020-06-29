@@ -40,8 +40,8 @@ class App extends Component {
   }
 
   render() {
-    let menuBlur = this.state.menuHasClass ? "main blur" :"main";
-    let menuClass = this.state.menuHasClass ? "visible" : "";
+    let mainView = this.state.menuHasClass ? "main blur" :"main";
+    let menuMobile = this.state.menuHasClass ? "menu-mobile visible" : "menu-mobile";
     let contentToDisplay = (
       <ProjectsPresentation selectVideo={this.state.project.video} />
     );
@@ -62,7 +62,7 @@ class App extends Component {
           </div>
         </MediaQuery>
         <div className="flex-content">
-          <main className={menuBlur}>
+          <main className={mainView}>
             <section>
               <div className="main-content">{contentToDisplay}</div>
               <ProjectsDescription
@@ -73,7 +73,7 @@ class App extends Component {
             </section>
           </main>
           <MediaQuery query="(max-device-width: 973px)">
-            <nav id="menu" className={menuClass}>
+            <nav className={menuMobile}>
               <FeaturedWork
                 projects={data.projects}
                 pics={images}
@@ -95,8 +95,8 @@ class App extends Component {
             </nav>
           </MediaQuery>
         </div>
-        <footer className="footer">
-          <p className="footer p">Created by Marta</p>
+        <footer className="site-footer">
+          <p className="footer-text">Created by Marta</p>
         </footer>
       </div>
     );
