@@ -23,37 +23,37 @@ class AboutMe extends React.Component {
         */}
         <section aria-label= "Personal information" className="personal-information">
           <hr className="orange-line"></hr>
-          <h2 className="author-name">
+          <p className="author-name">
             Hi, I'm Marta Drost
-          </h2>
+          </p>
           <div className="personal-data">
             <div className="personal-item-wrapper">
-              <h3 className="personal-item-title">contact</h3>
+              <p className="personal-item-title">contact</p>
               <div className="personal-item-icon">
-                <img src={mailIcon} alt="mail" />
+                <img src={mailIcon} alt="" />
               </div>
             </div>
             <p className="personal-item">
               martadrost@protonmail.com
             </p>
             <div className="personal-item-wrapper">
-              <h3 className="personal-item-title">github profile</h3>
+              <p className="personal-item-title">github profile</p>
               <div className="personal-item-icon">
-                <img src={gitHubIcon} alt="git hub" />
+                <img src={gitHubIcon} alt="" />
               </div>
             </div>
             <p className="personal-item">
-              <a className="personal-item-link" href={"https://github.com/pressR2"}>
+              <a className="personal-item-link" href={"https://github.com/pressR2"} target="_blank">
                 github.com/pressR2
               </a></p>
             <div className="personal-item-wrapper">
-              <h3 className="personal-item-title">codewars profile</h3>
+              <p className="personal-item-title">codewars profile</p>
               <div className="personal-item-icon">
-                <img src={codeWarsIcon} alt="codewars" />
+                <img src={codeWarsIcon} alt="" />
               </div>
             </div>
               <p className="personal-item">
-                <a className="personal-item-link" href={"https://www.codewars.com/users/Marta_R2"}>
+                <a className="personal-item-link" href={"https://www.codewars.com/users/Marta_R2"} target="_blank">
                   codewars.com/users/Marta_R2
                 </a></p>
               </div> 
