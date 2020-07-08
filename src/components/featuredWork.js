@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Chevron from "./chevron";
+import { Link } from "react-router-dom";
 
 class FeaturedWork extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class FeaturedWork extends React.Component {
   state = {
     projectIndex: 2,
     hoveringElem: {},
-  }
+  };
 
   next() {
     this.slider.slickNext();
@@ -33,20 +34,18 @@ class FeaturedWork extends React.Component {
 
   hoverOn(project) {
     this.setState({
-      hoveringElem: project
+      hoveringElem: project,
     });
   }
 
   hoverOut() {
     this.setState({
-      hoveringElem: {}
+      hoveringElem: {},
     });
   }
 
   render() {
     let pr = this.props;
-    let st = this.state;
-    let sliderNext = this.sliderNext;
     let hoverOn = this.hoverOn;
     let hoverOut = this.hoverOut;
 
@@ -56,96 +55,85 @@ class FeaturedWork extends React.Component {
       draggable: false,
       vertical: true,
       arrows: false,
-      accessibility: true,
-      afterChange: (index) => this.setState({projectIndex: index + 2
-      })
+      // accessibility: true,
+      afterChange: (index) => this.setState({ projectIndex: index + 2 }),
     };
+
     return (
-      <section
+      <div
         className="carousel"
-        aria-roledescription="carousel"
-        aria-label="Projects list"
+        // aria-label="Projects list"
       >
         <div className="carousel-inner">
           <button
             className="previous-slide"
             onClick={this.previous}
             aria-label="Previous Slide"
-            tabIndex={1}
           >
             <Chevron />
           </button>
           <div aria-live="polite">
             <Slider ref={(c) => (this.slider = c)} {...settings}>
-              {this.props.projects.map(function (project, index) {
-                let projectIndex = index;
-                let imageUrl = pr.pics(project.image);
-                let imageOnHoverURL = pr.pics(project.imageOnHover);
-                let imageClass = "project-image";
-                
-                if (project === this.state.hoveringElem) {
-                   imageUrl = imageOnHoverURL;
-                }
-                
-                if (project === this.props.currentProject) {
-                  imageClass = "project-image project-image-selected";
-                  // imageUrl = imageOnHoverURL;
-                }
-                
-                let focus=() => {};
-                if (st.projectIndex === index) {
-                  focus = sliderNext;
-                }
+              {this.props.projects.map(
+                function (project, index) {
+                  let projectIndex = index;
+                  let projectPath = project.image.substring(1, project.image.length - 4);
+                  let imageUrl = pr.pics(project.image);
+                  let imageOnHoverURL = pr.pics(project.imageOnHover);
+                  let imageClass = "project-image";
 
-                return ( 
-                  <div key={project.image} role="group" aria-roledescription="slide" aria-label={`${projectIndex + 1} of ${pr.projects.length}`} >
-                    <img tabIndex={projectIndex + 2} onBlur={focus}
-                      className={imageClass}
-                      src={imageUrl}
-                      alt={project.description[0]}
+                  if (project === this.state.hoveringElem) {
+                    imageUrl = imageOnHoverURL;
+                  }
 
-                      onMouseOut={(function() {
-                        return function() {
-                          hoverOut();
-                        }
-                      })()}
+                  if (project === this.props.currentProject) {
+                    imageClass = "project-image project-image-selected";
+                  }
 
-                      onMouseOver={(function(projectOnHover) {
-                        return function() {
-                          hoverOn(projectOnHover);
-                        }
-                      })(project)}
-                      
-                      onKeyDown={(function(projectToApply){
-                        return function (event) {
-                          if (event.keyCode === 13 || event.keyCode === 32) {
-                            pr.selectProject(projectToApply);
-                          }
-                        }
-                      })(project)}
+                  return (
+                    <Link
+                      to={projectPath}
+                      key={project.image}
+                      role="group"
+                      aria-label={`${projectIndex + 1} of ${pr.projects.length}`}>
+                      <img
+                        className={imageClass}
+                        src={imageUrl}
+                        alt={project.description[0]}
 
-                      onClick={(function (projectToApply) {
-                        return function (event) {
-                          pr.selectProject(projectToApply);
-                          pr.closeMenu();
-                        };
-                      })(project)}
-                    ></img>
-                  </div>
-                );
-              }.bind(this))}
+                        onMouseOut={(function () {
+                          return function () {
+                            hoverOut();
+                          };
+                        })()}
+
+                        onMouseOver={(function (projectOnHover) {
+                          return function () {
+                            hoverOn(projectOnHover);
+                          };
+                        })(project)}
+
+                        onClick={(function (projectToApply) {
+                          return function (event) {
+                            pr.closeMenu();
+                          };
+                        })(project)}
+                      ></img>
+                    </Link>
+                  );
+                }.bind(this)
+              )}
             </Slider>
           </div>
           <button
             className="next-slide"
             onClick={this.next}
             aria-label="Next Slide"
-            tabIndex={11}
           >
-           <Chevron /> 
+            <Chevron />
           </button>
         </div>
-      </section>
+      </div>
     );
   }
 }
