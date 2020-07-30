@@ -16,16 +16,22 @@ class FeaturedWork extends React.Component {
   }
 
   state = {
-    projectIndex: 2,
+    focusableProjectIndex: 0,
     hoveringElem: {},
   };
 
   next() {
     this.slider.slickNext();
+    this.setState({
+      focusableProjectIndex: (this.state.focusableProjectIndex + 1) % this.props.projects.length
+    })
   }
 
   previous() {
     this.slider.slickPrev();
+    this.setState({
+      focusableProjectIndex: this.state.focusableProjectIndex === 0 ? this.props.projects.length : this.state.focusableProjectIndex - 1
+    })
   }
 
   sliderNext() {
@@ -45,6 +51,7 @@ class FeaturedWork extends React.Component {
   }
 
   render() {
+    console.log(this.state.focusableProjectIndex);
     let pr = this.props;
     let hoverOn = this.hoverOn;
     let hoverOut = this.hoverOut;
@@ -55,14 +62,12 @@ class FeaturedWork extends React.Component {
       draggable: false,
       vertical: true,
       arrows: false,
-      // accessibility: true,
-      afterChange: (index) => this.setState({ projectIndex: index + 2 }),
+      accessibility: true
     };
-
+    
     return (
       <div
         className="carousel"
-        // aria-label="Projects list"
       >
         <div className="carousel-inner">
           <button
@@ -81,20 +86,10 @@ class FeaturedWork extends React.Component {
                   let imageUrl = pr.pics(project.image);
                   let imageOnHoverURL = pr.pics(project.imageOnHover);
                   let imageClass = "project-image";
-
-                  if (project === this.state.hoveringElem) {
-                    imageUrl = imageOnHoverURL;
-                  }
-
-                  if (project === this.props.currentProject) {
-                    imageClass = "project-image project-image-selected";
-                  }
-
-                  return (
+                  let projektLink = (
                     <Link
                       to={projectPath}
                       key={project.image}
-                      role="group"
                       aria-label={`${projectIndex + 1} of ${pr.projects.length}`}>
                       <img
                         className={imageClass}
@@ -120,7 +115,24 @@ class FeaturedWork extends React.Component {
                         })(project)}
                       ></img>
                     </Link>
-                  );
+                  )
+                  
+                  if (project === this.state.hoveringElem) {
+                    imageUrl = imageOnHoverURL;
+                  }
+
+                  if (project === this.props.currentProject) {
+                    imageClass = "project-image project-image-selected";
+                  }
+
+                  if (index === this.state.focusableProjectIndex) {
+                    projektLink = (
+                    <div>{projektLink}</div>
+                    )
+                  }
+
+                  return projektLink;
+                    
                 }.bind(this)
               )}
             </Slider>
