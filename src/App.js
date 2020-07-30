@@ -90,7 +90,7 @@ class App extends Component {
               {projectRoutes}
             </Switch>
             <MediaQuery query="(max-device-width: 973px)">
-              <nav aria-label="Project list" className={menuMobile}>
+              <nav aria-label="Project slider" className={menuMobile}>
                 <FeaturedWork
                   projects={data.projects}
                   pics={images}
@@ -101,7 +101,7 @@ class App extends Component {
               </nav>
             </MediaQuery>
             <MediaQuery query="(min-device-width: 974px)">
-              <nav aria-label="Project list" className="menu">
+              <nav aria-label="Project slider" className="menu">
                 <FeaturedWork
                   projects={data.projects}
                   pics={images}
