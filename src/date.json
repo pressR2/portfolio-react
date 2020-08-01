@@ -1,7 +1,7 @@
 {"projects":[
     {   "webIcons": ["devicon-html5-plain-wordmark", "devicon-css3-plain-wordmark", "devicon-javascript-plain", "devicon-react-original-wordmark", "devicon-jquery-plain-wordmark", "devicon-nodejs-plain", "devicon-github-plain-wordmark"],
-        "image": "./about-me.PNG",
-        "imageOnHover": "./about-me.PNG",
+        "image": "./about-me.png",
+        "imageOnHover": "./about-me.png",
         "description": ["About me", "Dry jokes ninja. A fan of superhero movies and Japanese animation. Hiking enthusiast, avid video game player."],
         "gitHubLink": "",
         "video": ""
