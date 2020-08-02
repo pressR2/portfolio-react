@@ -10,7 +10,6 @@ class FeaturedWork extends React.Component {
     super(props);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
-    this.sliderNext = this.sliderNext.bind(this);
     this.hoverOn = this.hoverOn.bind(this);
     this.hoverOut = this.hoverOut.bind(this);
   }
@@ -24,18 +23,16 @@ class FeaturedWork extends React.Component {
     this.slider.slickNext();
     this.setState({
       focusableProjectIndex: (this.state.focusableProjectIndex + 1) % this.props.projects.length
-    })
+    });
+    this.fixFocus();
   }
 
   previous() {
     this.slider.slickPrev();
     this.setState({
       focusableProjectIndex: this.state.focusableProjectIndex === 0 ? this.props.projects.length : this.state.focusableProjectIndex - 1
-    })
-  }
-
-  sliderNext() {
-    this.next();
+    });
+    this.fixFocus();
   }
 
   hoverOn(project) {
@@ -50,8 +47,24 @@ class FeaturedWork extends React.Component {
     });
   }
 
+  fixFocus() {
+    let arrOfFocusableLinks = document.getElementsByClassName("current-link");
+    for (let i = 0; i < arrOfFocusableLinks.length; i++) {
+      if (arrOfFocusableLinks[i].parentNode.parentNode.className === "slick-slide slick-cloned") {
+        arrOfFocusableLinks[i].firstChild.tabIndex = -1
+      }
+    }
+  }
+
+  componentDidMount() {
+    this.fixFocus();
+  }
+
+  componentDidUpdate() {
+    this.fixFocus();
+  }
+
   render() {
-    console.log(this.state.focusableProjectIndex);
     let pr = this.props;
     let hoverOn = this.hoverOn;
     let hoverOut = this.hoverOut;
@@ -86,11 +99,11 @@ class FeaturedWork extends React.Component {
                   let imageUrl = pr.pics(project.image);
                   let imageOnHoverURL = pr.pics(project.imageOnHover);
                   let imageClass = "project-image";
-                  let projektLink = (
+                  let projectLink = (
                     <Link
                       to={projectPath}
                       key={project.image}
-                      aria-label={`${projectIndex + 1} of ${pr.projects.length}`}>
+                      aria-label={`${project.description[0]} ${projectIndex + 1} of ${pr.projects.length}`}>
                       <img
                         className={imageClass}
                         src={imageUrl}
@@ -126,12 +139,12 @@ class FeaturedWork extends React.Component {
                   }
 
                   if (index === this.state.focusableProjectIndex) {
-                    projektLink = (
-                    <div>{projektLink}</div>
+                    projectLink = (
+                    <div className="current-link" key={index}>{projectLink}</div>
                     )
                   }
 
-                  return projektLink;
+                  return projectLink;
                     
                 }.bind(this)
               )}
