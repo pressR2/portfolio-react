@@ -59,7 +59,7 @@ class App extends Component {
       }
 
       return (
-        <Route exact path={projectPath}>
+        <Route exact path={projectPath} key={index}>
           <main className={mainView} aria-label="Main Content">
             <div className="main-content">{contentToDisplay}</div>
             <ProjectsDescription
