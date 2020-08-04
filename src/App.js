@@ -16,13 +16,11 @@ const images = require.context("../images", true);
 class App extends Component {
   constructor(props) {
     super(props);
-    this.selectProject = this.selectProject.bind(this);
     this.menuHandling = this.menuHandling.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
   }
 
   state = {
-    project: data.projects[0],
     menuHasClass: false,
   };
 
@@ -32,12 +30,6 @@ class App extends Component {
 
   menuHandling() {
     this.setState({ menuHasClass: !this.state.menuHasClass });
-  }
-
-  selectProject(project) {
-    this.setState({
-      project: project,
-    });
   }
 
   render() {
@@ -71,7 +63,7 @@ class App extends Component {
         </Route>
       );
     });
-
+    
     return (
       <BrowserRouter>
         <div className="main-wrapper">
@@ -94,8 +86,6 @@ class App extends Component {
                 <FeaturedWork
                   projects={data.projects}
                   pics={images}
-                  selectProject={this.selectProject}
-                  currentProject={this.state.project}
                   closeMenu={this.closeMenu}
                 />
               </nav>
@@ -105,8 +95,6 @@ class App extends Component {
                 <FeaturedWork
                   projects={data.projects}
                   pics={images}
-                  selectProject={this.selectProject}
-                  currentProject={this.state.project}
                   closeMenu={this.closeMenu}
                 />
               </nav>
