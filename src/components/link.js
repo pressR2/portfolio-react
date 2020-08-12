@@ -14,14 +14,11 @@ class SlideLinkWithoutRouter extends React.Component {
     let imageUrl = pr.pics(pr.project.image);
     let imageOnHoverURL = pr.pics(pr.project.imageOnHover);
          
-    return (
-      <Link to={projectPath} key={pr.project.image}>
+    let className = location.pathname === projectPath ? "project-image project-image-selected" : "project-image";
+    let projectLink= (
+      <Link to={projectPath} key={pr.project.image} className="link-wrapper">
         <img
-         className={
-            location.pathname === projectPath
-              ? "project-image project-image-selected"
-              : "project-image"
-          }
+          className={className}
           src={pr.hoveringImage ? imageOnHoverURL : imageUrl}
           alt={pr.project.description[0]}
           aria-label={`${pr.project.description[0]} ${pr.slideIndex + 1} of ${pr.projects.length}`}
@@ -45,8 +42,12 @@ class SlideLinkWithoutRouter extends React.Component {
           })(pr.project)}
         ></img>
       </Link>
-    );
+    )
+        let divClass = "current-link";
+        let projectLinkDiv= (<div className={divClass} key={pr.SlideIndex}>{projectLink}</div>); 
+        return pr.focusableLink ? projectLinkDiv : projectLink; 
   }
+
 }
 
 const SlideLink = withRouter(SlideLinkWithoutRouter);

@@ -54,6 +54,7 @@ html {
   padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0;
+  /* border: solid 4px #FF6D00; */
 }
 
 .video-wrapper iframe {
@@ -108,6 +109,11 @@ html {
 }
 
 /** Project Image **/
+
+.link-wrapper {
+  width: 100%;
+  display: inline-block;
+}
 
 .project-image {
   width: 99%;
@@ -204,6 +210,10 @@ html {
 
 
 /* SHORT BIO */
+
+.personal-information {
+  font-weight: 600;
+}
 
 .author-wrapper {
   display: flex;

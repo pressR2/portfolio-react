@@ -94,8 +94,7 @@ class FeaturedWork extends React.Component {
             <Slider ref={(c) => (this.slider = c)} {...settings}>
               {this.props.projects.map(
                 function (project, index) {
-                  let projectLink = (
-                    <SlideLink
+                   return (<SlideLink
                       project={project}
                       pics={pr.pics}
                       slideIndex={index}
@@ -103,19 +102,9 @@ class FeaturedWork extends React.Component {
                       hoverOn={hoverOn}
                       hoverOut={hoverOut}
                       closeMenu={pr.closeMenu}
-                      projects={pr.projects}>
-                    </SlideLink>
-                  )
-                  
-                  if (index === this.state.focusableProjectIndex) {
-                    projectLink = (
-                      /* aria - set link to focusable*/
-                    <div className="current-link" key={index}>{projectLink}</div>
-                    )
-                  }
-
-                  return projectLink;
-                    
+                      projects={pr.projects}
+                      focusableLink={index === this.state.focusableProjectIndex}>
+                    </SlideLink>)       
                 }.bind(this)
               )}
             </Slider>
