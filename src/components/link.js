@@ -13,7 +13,6 @@ class SlideLinkWithoutRouter extends React.Component {
     let projectPath = pr.project.image.substring(1, pr.project.image.length - 4);
     let imageUrl = pr.pics(pr.project.image);
     let imageOnHoverURL = pr.pics(pr.project.imageOnHover);
-         
     let className = location.pathname === projectPath ? "project-image project-image-selected" : "project-image";
     let projectLink= (
       <Link to={projectPath} key={pr.project.image} className="link-wrapper">
