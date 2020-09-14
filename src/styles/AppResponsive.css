@@ -2,16 +2,16 @@
 
 @media only screen and (min-width: 360px) and (max-width: 569px) {
   .menu-mobile {
-    max-width: 200px;
-    transform: translate(-210px,0);
+    max-width: 185px;
+    transform: translate(-195px,0);
   }
 }
 
 
 @media only screen and (min-width: 570px) and (max-width: 973px) {
   .menu-mobile {
-    max-width: 215px;
-    transform: translate(-225px,0);
+    max-width: 210px;
+    transform: translate(-220px,0);
   }
 }
 
