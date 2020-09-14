@@ -187,15 +187,25 @@ html {
   font-weight: 900;
 }
 
-.github-repo {
+.github-repo,
+.project-site {
   font-size: 17px;
   text-decoration: none;
-  color: #388dee;
-  margin: 18px 0 0 25px;
+  color: #157cf1;
+  margin: 18px 0 0 5px;
+  font-weight: 600;
 }
 
-.github-repo:hover {
-  font-size: 18px;
+.link-icon {
+  width: 25px;
+  height: 25px;
+  margin-top: 16px;
+  margin-left: 40px;
+}
+
+.github-repo:hover,
+.project-site:hover {
+  color: #52acf5;
 }
 
 .project-description {
@@ -264,20 +274,20 @@ html {
 }
 
 .personal-item {
-  color: #388dee;
+  color: #157cf1;
   margin: 0 0 15px;
   font-size: 15px;
 }
 
 .personal-item-link {
-  color: #388dee;
+  color: #157cf1;
   padding: 10px 4px 0 0;
   font-size: 15px;
   text-decoration: none;
 }
 
 .personal-item-link:hover {
-  color: #469cff;
+  color: #52acf5;
 }
 
 

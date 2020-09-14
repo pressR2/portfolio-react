@@ -58,6 +58,7 @@ class App extends Component {
               webTechnologies={project.webIcons}
               gitHubLink={project.gitHubLink}
               selectDescription={project.description}
+              webPage={project.link}
             />
           </main>
         </Route>

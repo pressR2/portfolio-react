@@ -1,4 +1,6 @@
 import React from "react";
+import webPageIcon from "../images/external-link-symbol.svg";
+import gitHubIcon from "../images/github-logo.svg"
 
 class ProjectsDescription extends React.Component {
   render() {
@@ -10,9 +12,31 @@ class ProjectsDescription extends React.Component {
         {linkText}
       </a>
     );
-    if (this.props.gitHubLink === "") {
+    let githubIcon = (
+      <div className="link-icon">
+        <img src={gitHubIcon} alt="" />
+      </div>
+    )
+
+    let webPageText = "page";
+    let webPage = (
+      <a className="project-site" href={this.props.webPage} target ="_blank">
+        {webPageText}
+      </a>
+    );
+    let webpageLink = (
+      <div className="link-icon">
+        <img src={webPageIcon} alt="" />
+      </div>
+    )
+   
+    if ((this.props.gitHubLink === "") && (this.props.webPage === "")) {
       githubLink = <div></div>;
+      githubIcon =<div></div>;
+      webPage = <div></div>;
+      webpageLink = <div></div>;
     }
+
     return (
       <div aria-label= {itemTitle} className="project-presentation">
         <div aria-label={itemWebTechnologies} className="icons-wrapper">
@@ -28,7 +52,10 @@ class ProjectsDescription extends React.Component {
         <article aria-label="Description" className="project-description-area">
           <header className="title-and-link">
             <h1 className="project-title">{this.props.selectDescription[0]}</h1>
+            {githubIcon}
             {githubLink}
+            {webpageLink}
+            {webPage}
           </header>
           <p className="project-description">{this.props.selectDescription[1]}</p>
         </article>
