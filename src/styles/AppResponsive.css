@@ -19,7 +19,7 @@
 @media only screen and (max-width: 650px) {
     .author-image-box {
       margin: 0 auto;
-      margin-top: 20px; 
+      margin-top: 20px;
     }
   
     .author-pic {
@@ -44,16 +44,13 @@
       color: rgb(180, 180, 180);
     }
 
-    .project-title {
-      width: 65%;
-    }
-
     .author-name {
       margin-left: 15px;
     }
 
-    .github-repo {
-      margin-top: 11px;
+    .link-icon {
+      margin-top: 7px;
+      margin-left: 10px;
     }
   }
 
@@ -63,6 +60,11 @@
       flex-direction: row;
       padding-bottom: 15%;
     }
+
+    .title-and-link {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
   
   
@@ -71,15 +73,34 @@
       font-size: 50px;
       margin-right: 8px;
     }
+  }
 
-    .github-repo {
-      margin-top: 13px;
+
+  @media only screen and (min-width: 652px) {
+    .github-repo,
+    .project-site {
+      margin-top: 12px;
+      margin-right: 27px;
+    }
+
+    .project-links {
+      margin-left: 40px;
     }
   }
-  
+
+
+  @media only screen and (min-width: 902px) {
+    .github-repo,
+    .project-site,
+    .link-icon {
+      margin-top: 16px;
+    }
+  }
+
   
   @media only screen and (min-width: 902px) and (max-width: 1021px) {
-    .author-name {
+    .author-name,
+    .project-title {
       font-size: 24px;
     }
    
@@ -88,17 +109,13 @@
       margin-right: 10px;
     }
     
-    .project-title {
-      font-size: 24px;
-    }
-    
     .project-description {
-      font-size: 16px;  
+      font-size: 16px;
     }
   }
 
 
-  @media only screen and (max-width: 973px) { 
+  @media only screen and (max-width: 973px) {
     .main {
       width: 100%;
     }
@@ -142,8 +159,10 @@
       font-size: 25px;
     }
     
-    .project-description {
-      font-size: 17px;  
+    .project-description,
+    .github-repo,
+    .project-site {
+      font-size: 17px;
     }
   }
 

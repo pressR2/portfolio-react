@@ -54,7 +54,6 @@ html {
   padding-bottom: 56.25%;
   padding-top: 25px;
   height: 0;
-  /* border: solid 4px #FF6D00; */
 }
 
 .video-wrapper iframe {
@@ -85,7 +84,7 @@ html {
   width: 100%;
   overflow: auto;
   position: absolute;
-  margin-top: 2px; 
+  margin-top: 2px;
   transform: translate(-180px,0);
   transition: all .2s ease-in-out;
   box-shadow: 0 1px 5px rgba(0,0,0,0.25), 0 0 50px rgba(0,0,0,0.1);
@@ -157,13 +156,13 @@ html {
 .project-presentation {
   margin-bottom: 55px;
   width: 100%;
-} 
+}
 
 /** Web Technologies **/
 
 .web-technologies-icon {
   color: #ffbc8f;
-  display: inline-block; 
+  display: inline-block;
   font-size: 41px;
   height: 50px;
   margin: 7px 5px 0 7px;
@@ -175,11 +174,6 @@ html {
   height: fit-content;
 }
 
-.title-and-link {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .project-title {
   font-size: 19px;
   color: #464646;
@@ -187,20 +181,24 @@ html {
   font-weight: 900;
 }
 
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .github-repo,
 .project-site {
-  font-size: 17px;
+  font-size: 16px;
   text-decoration: none;
   color: #157cf1;
-  margin: 18px 0 0 5px;
+  margin: 10px 20px 0 5px;
   font-weight: 600;
 }
 
 .link-icon {
   width: 25px;
   height: 25px;
-  margin-top: 16px;
-  margin-left: 40px;
+  margin-top: 11px;
 }
 
 .github-repo:hover,
@@ -209,7 +207,7 @@ html {
 }
 
 .project-description {
-  margin: 3px 2px 5px 10px;
+  margin: 7px 2px 5px 10px;
   font-size: 15px;
   font-weight: 600;
   color: #757474;
@@ -313,5 +311,5 @@ html {
 
 .footer-text {
   margin: 0;
-  color: #eaeaeb; 
+  color: #eaeaeb;
 }

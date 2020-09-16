@@ -52,10 +52,12 @@ class ProjectsDescription extends React.Component {
         <article aria-label="Description" className="project-description-area">
           <header className="title-and-link">
             <h1 className="project-title">{this.props.selectDescription[0]}</h1>
+            <div className="project-links">
             {githubIcon}
             {githubLink}
             {webpageLink}
             {webPage}
+            </div>
           </header>
           <p className="project-description">{this.props.selectDescription[1]}</p>
         </article>
