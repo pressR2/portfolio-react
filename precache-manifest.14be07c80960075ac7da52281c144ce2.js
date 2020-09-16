@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b786711798a889a761bda24cddd47c2a",
+    "revision": "ca5cfbd77f78ba817eda0bda5c2709d0",
     "url": "/index.html"
   },
   {
-    "revision": "f73ae363422f6f1fbdd9",
+    "revision": "e6f31d7f0895bc25ddb5",
     "url": "/static/css/2.18585a14.chunk.css"
   },
   {
-    "revision": "da0aa54f2a8c8c920471",
-    "url": "/static/css/main.176f925d.chunk.css"
+    "revision": "c8b584ec18c56323b65f",
+    "url": "/static/css/main.4276665d.chunk.css"
   },
   {
-    "revision": "f73ae363422f6f1fbdd9",
-    "url": "/static/js/2.2c1992de.chunk.js"
+    "revision": "e6f31d7f0895bc25ddb5",
+    "url": "/static/js/2.d29e5df6.chunk.js"
   },
   {
-    "revision": "96aee9fb3ee9c9bc1cfe2d4b1be0dbb7",
-    "url": "/static/js/2.2c1992de.chunk.js.LICENSE"
+    "revision": "3a10ad7770d8711fbd994f8725ca92a4",
+    "url": "/static/js/2.d29e5df6.chunk.js.LICENSE"
   },
   {
-    "revision": "da0aa54f2a8c8c920471",
-    "url": "/static/js/main.0a0a6ecf.chunk.js"
+    "revision": "c8b584ec18c56323b65f",
+    "url": "/static/js/main.392dc2a4.chunk.js"
   },
   {
     "revision": "77d451e7038c8864e2b2",
@@ -36,12 +36,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/arcade-game2.3be1c01a.png"
   },
   {
-    "revision": "196fe17e087da187028dca34180e10f3",
-    "url": "/static/media/author.196fe17e.png"
-  },
-  {
     "revision": "bfd770095c7d88fc0e9b75c928ba6205",
     "url": "/static/media/author3.bfd77009.png"
+  },
+  {
+    "revision": "951e9a97b59a0f196964fbfec4888a6f",
+    "url": "/static/media/external-link-symbol.951e9a97.svg"
   },
   {
     "revision": "ff0217c1e5edcea46b8dc3a04d494acf",
