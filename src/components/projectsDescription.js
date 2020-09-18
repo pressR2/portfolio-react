@@ -30,11 +30,14 @@ class ProjectsDescription extends React.Component {
       </div>
     )
    
-    if ((this.props.gitHubLink === "") && (this.props.webPage === "")) {
-      githubLink = <div></div>;
-      githubIcon =<div></div>;
-      webPage = <div></div>;
-      webpageLink = <div></div>;
+    if (this.props.gitHubLink === "") {
+      githubLink = null;
+      githubIcon = null;
+    }
+
+    if (this.props.webPage ==="") {
+      webPage = null;
+      webpageLink = null;
     }
 
     return (
