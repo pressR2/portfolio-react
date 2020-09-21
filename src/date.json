@@ -11,7 +11,7 @@
         "image": "./responsive-old-portfolio-site2.png",
         "imageOnHover": "./responsive-old-portfolio-site.png",
         "description": ["Previous responsive portfolio site", "Simple functional webpage translated from a design prototype."],
-        "gitHubLink": "https://github.com/pressR2/pressR2.github.io.git",
+        "gitHubLink": "https://github.com/pressR2/Old-portfolio",
         "video": "l3pdOU17Ayo",
         "link":"https://pressr2.github.io/Old-portfolio/"
     },
@@ -19,7 +19,7 @@
         "image": "./pixel-art-maker2.png",
         "imageOnHover": "./pixel-art-maker.png",
         "description": ["Pixel Art Maker", "A single-page web app where the user can create artistic designs."],
-        "gitHubLink": "https://github.com/pressR2/pressR2.github.io/tree/master/pixel_art_maker",
+        "gitHubLink": "https://github.com/pressR2/Old-portfolio/tree/master/pixel_art_maker",
         "video": "-TwYf7yi-_E",
         "link":"https://pressr2.github.io/Old-portfolio/pixel_art_maker/"
     },
