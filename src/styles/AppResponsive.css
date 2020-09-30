@@ -72,6 +72,7 @@
     .web-technologies-icon {
       font-size: 50px;
       margin-right: 8px;
+      height: 60px;
     }
   }
 
@@ -103,10 +104,16 @@
     .project-title {
       font-size: 24px;
     }
+
+    .technologies-label {
+      font-size: 22px;
+      max-width: 150px;
+    }
    
     .web-technologies-icon {
       font-size: 52px;
       margin-right: 10px;
+      height: 65px;
     }
     
     .project-description {
@@ -153,10 +160,16 @@
     .web-technologies-icon {
       font-size: 60px;
       margin-right: 11px;
+      height: 70px;
     }
     
     .project-title {
       font-size: 25px;
+    }
+
+    .technologies-label {
+      font-size: 23px;
+      max-width: 160px;
     }
     
     .project-description,

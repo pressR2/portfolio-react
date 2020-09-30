@@ -161,6 +161,17 @@ html {
 
 /** Web Technologies **/
 
+.technologies-label {
+  margin: 40px 0 0 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1.2px;
+  text-align: center;
+  background-color: #5e5b5b;
+  max-width: 140px;
+}
+
 .web-technologies-icon {
   color: #ffbc8f;
   display: inline-block;

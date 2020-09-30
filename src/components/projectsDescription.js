@@ -6,6 +6,15 @@ class ProjectsDescription extends React.Component {
   render() {
     let itemTitle = this.props.selectDescription[0] === "About me" ? "About me" : "Project presentation"
     let itemWebTechnologies = this.props.selectDescription[0] === "About me" ? "Author's skills" : "Web technologies used to build the project"
+    let technologiesLabelText = "";
+
+    if (this.props.gitHubLink === "") {
+      technologiesLabelText="Stuff I use"
+    }
+    let technologiesLabel = (
+      <p className="technologies-label">{technologiesLabelText}</p>
+    );
+
     let linkText = "github";
     let githubLink = (
       <a className="github-repo" href={this.props.gitHubLink} target="_blank">
@@ -35,14 +44,16 @@ class ProjectsDescription extends React.Component {
       githubIcon = null;
     }
 
-    if (this.props.webPage ==="") {
+    if (this.props.webPage === "") {
       webPage = null;
       webpageLink = null;
     }
 
+
     return (
       <div aria-label= {itemTitle} className="project-presentation">
-        <div aria-label={itemWebTechnologies} className="icons-wrapper">
+        <div aria-label={itemWebTechnologies}>
+         {technologiesLabel}
           {this.props.webTechnologies.map(function (icons) {
             let iconText = icons.split("-")[1];
             return (
