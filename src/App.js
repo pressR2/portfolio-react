@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import * as data from "./date.json";
 import MediaQuery from "react-responsive";
-import FeaturedWork from "./components/featuredWork";
-import ProjectsDescription from "./components/projectsDescription";
-import ProjectsPresentation from "./components/projectsPresentation";
-import AboutMe from "./components/aboutMe.js";
-import Hamburger from "./components/hamburger.js";
-import FeedReader from "./components/feedReader.js";
+import ProjectsSlider from "./components/ProjectsSlider.js";
+import ProjectsDescription from "./components/ProjectsDescription.js";
+import ProjectsPresentation from "./components/ProjectsPresentation.js";
+import AboutMe from "./components/AboutMe.js";
+import Hamburger from "./components/Hamburger.js";
+import FeedReader from "./components/FeedReader.js";
 import "./styles/App.css";
 import "./styles/AppResponsive.css";
 import { Route, BrowserRouter, Redirect, Switch } from "react-router-dom";
@@ -84,7 +84,7 @@ class App extends Component {
             </Switch>
             <MediaQuery query="(max-device-width: 973px)">
               <nav aria-label="Project slider" className={menuMobile}>
-                <FeaturedWork
+                <ProjectsSlider
                   projects={data.projects}
                   pics={images}
                   closeMenu={this.closeMenu}
@@ -93,7 +93,7 @@ class App extends Component {
             </MediaQuery>
             <MediaQuery query="(min-device-width: 974px)">
               <nav aria-label="Project slider" className="menu">
-                <FeaturedWork
+                <ProjectsSlider
                   projects={data.projects}
                   pics={images}
                   closeMenu={this.closeMenu}

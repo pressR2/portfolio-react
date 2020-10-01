@@ -2,11 +2,11 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Chevron from "./chevron";
-import SlideLink from "./link.js";
+import Chevron from "./Chevron.js";
+import SlideLink from "./SlideLinkWithoutRouter.js";
 
 
-class FeaturedWork extends React.Component {
+class ProjectsSlider extends React.Component {
   constructor(props) {
     super(props);
     this.next = this.next.bind(this);
@@ -122,4 +122,4 @@ class FeaturedWork extends React.Component {
   }
 }
 
-export default FeaturedWork;
+export default ProjectsSlider;
