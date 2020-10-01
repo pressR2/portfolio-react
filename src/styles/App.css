@@ -162,14 +162,10 @@ html {
 /** Web Technologies **/
 
 .technologies-label {
-  margin: 40px 0 0 10px;
-  font-size: 18px;
+  margin: 0 10px 0;
+  font-size: 19px;
   font-weight: 600;
-  color: white;
-  letter-spacing: 1.2px;
-  text-align: center;
-  background-color: #5e5b5b;
-  max-width: 140px;
+  color: #5e5b5b;
 }
 
 .web-technologies-icon {
@@ -177,20 +173,20 @@ html {
   display: inline-block;
   font-size: 41px;
   height: 50px;
-  margin: 7px 5px 0 7px;
+  margin: 0 5px;
 }
 
 /** Description **/
 
 .project-description-area {
   height: fit-content;
+  margin-top: 15px;
 }
 
 .project-title {
   font-size: 19px;
   color: #464646;
   margin: 10px 10px 0;
-  font-weight: 900;
 }
 
 .project-links {

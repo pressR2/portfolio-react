@@ -101,15 +101,11 @@
   
   @media only screen and (min-width: 902px) and (max-width: 1021px) {
     .author-name,
-    .project-title {
+    .project-title,
+    .technologies-label {
       font-size: 24px;
     }
 
-    .technologies-label {
-      font-size: 22px;
-      max-width: 150px;
-    }
-   
     .web-technologies-icon {
       font-size: 52px;
       margin-right: 10px;
@@ -163,15 +159,11 @@
       height: 70px;
     }
     
-    .project-title {
+    .project-title,
+    .technologies-label {
       font-size: 25px;
     }
 
-    .technologies-label {
-      font-size: 23px;
-      max-width: 160px;
-    }
-    
     .project-description,
     .github-repo,
     .project-site {
