@@ -97,6 +97,7 @@ class ProjectsSlider extends React.Component {
                    return (<SlideLink
                       project={project}
                       pics={pr.pics}
+                      key={index}
                       slideIndex={index}
                       hoveringImage={project === this.state.hoveringElem}
                       hoverOn={hoverOn}
