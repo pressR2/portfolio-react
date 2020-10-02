@@ -155,7 +155,7 @@ html {
 /* PROJECT DESCRIPTION */
 
 .project-presentation {
-  margin-bottom: 55px;
+  margin: 25px 0 55px;
   width: 100%;
 }
 
@@ -180,7 +180,7 @@ html {
 
 .project-description-area {
   height: fit-content;
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 .project-title {
