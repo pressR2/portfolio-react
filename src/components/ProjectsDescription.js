@@ -7,14 +7,6 @@ class ProjectsDescription extends React.Component {
     let itemTitle = this.props.selectDescription[0] === "About me" ? "About me" : "Project presentation"
     let itemWebTechnologies = this.props.selectDescription[0] === "About me" ? "Author's skills" : "Web technologies used to build the project"
     let technologiesLabelText = "";
-
-    if (this.props.gitHubLink === "") {
-      technologiesLabelText="Stuff I use"
-    }
-    let technologiesLabel = (
-      <p className="technologies-label">{technologiesLabelText}</p>
-    );
-
     let linkText = "github";
     let githubLink = (
       <a className="github-repo" href={this.props.gitHubLink} target="_blank">
@@ -42,7 +34,12 @@ class ProjectsDescription extends React.Component {
     if (this.props.gitHubLink === "") {
       githubLink = null;
       githubIcon = null;
+      technologiesLabelText="Stuff I use"
     }
+
+    let technologiesLabel = (
+      <p className="technologies-label">{technologiesLabelText}</p>
+    );
 
     if (this.props.webPage === "") {
       webPage = null;
