@@ -9,7 +9,7 @@ import Hamburger from "./components/Hamburger.js";
 import FeedReader from "./components/FeedReader.js";
 import "./styles/App.css";
 import "./styles/AppResponsive.css";
-import { Route, BrowserRouter, Redirect, Switch } from "react-router-dom";
+import { Route, Redirect, Switch, HashRouter } from "react-router-dom";
 
 const images = require.context("../images", true);
 
@@ -65,8 +65,8 @@ class App extends Component {
       );
     });
     
-    return (
-      <BrowserRouter>
+    return (  
+      <HashRouter>
         <div className="main-wrapper">
           <MediaQuery query="(max-device-width: 973px)">
             <div>
@@ -105,7 +105,7 @@ class App extends Component {
             <p className="footer-text">Created by Marta</p>
           </footer>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
