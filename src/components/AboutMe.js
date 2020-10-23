@@ -25,7 +25,7 @@ class AboutMe extends React.Component {
                 </div>
               </div>
               <p className="personal-item" >
-                <a className="personal-item-link" href={"mailto: martadrost@protonmail.com"} target="_blank">
+                <a className="personal-item-link" href={"mailto: martadrost@protonmail.com"} rel="noopener noreferrer" target="_blank">
                   martadrost@protonmail.com
                 </a></p>
               <div className="personal-item-wrapper">
@@ -35,7 +35,7 @@ class AboutMe extends React.Component {
                 </div>
               </div>
               <p className="personal-item">
-                <a className="personal-item-link" href={"https://github.com/pressR2"} target="_blank">
+                <a className="personal-item-link" href={"https://github.com/pressR2"} rel="noopener noreferrer" target="_blank">
                   github.com/pressR2
                 </a></p>
               <div className="personal-item-wrapper">
@@ -45,7 +45,7 @@ class AboutMe extends React.Component {
                 </div>
               </div>
                 <p className="personal-item">
-                  <a className="personal-item-link" href={"https://www.codewars.com/users/Marta_R2"} target="_blank">
+                  <a className="personal-item-link" href={"https://www.codewars.com/users/Marta_R2"} rel="noopener noreferrer" target="_blank">
                     codewars.com/users/Marta_R2
                   </a>
                 </p>

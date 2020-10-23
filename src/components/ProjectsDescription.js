@@ -9,7 +9,7 @@ class ProjectsDescription extends React.Component {
     let technologiesLabelText = "";
     let linkText = "github";
     let githubLink = (
-      <a className="github-repo" href={this.props.gitHubLink} target="_blank">
+      <a className="github-repo" href={this.props.gitHubLink} rel="noopener noreferrer" target="_blank">
         {linkText}
       </a>
     );
@@ -21,7 +21,7 @@ class ProjectsDescription extends React.Component {
 
     let webPageText = "page";
     let webPage = (
-      <a className="project-site" href={this.props.webPage} target ="_blank">
+      <a className="project-site" href={this.props.webPage} rel="noopener noreferrer" target ="_blank">
         {webPageText}
       </a>
     );
