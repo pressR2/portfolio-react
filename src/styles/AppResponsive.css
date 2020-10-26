@@ -23,7 +23,7 @@
     }
   
     .author-pic {
-      max-width: 240px;
+      width: 220px;
     }
     
     .personal-information {
@@ -68,11 +68,20 @@
   }
   
   
-  @media only screen and (min-width: 640px) and (max-width: 901px) {
+  @media only screen and (min-width: 490px) and (max-width: 901px) {
     .web-technologies-icon {
       font-size: 50px;
       margin-right: 8px;
       height: 60px;
+    }
+
+    .technologies-label,
+    .project-title {
+      font-size: 20px;
+    }
+
+    .author-name {
+      font-size: 25px;
     }
   }
 
@@ -86,24 +95,15 @@
 
     .project-links {
       margin-left: 40px;
-    }
-  }
-
-
-  @media only screen and (min-width: 902px) {
-    .github-repo,
-    .project-site,
-    .link-icon {
-      margin-top: 16px;
+      margin-top: 3px;
     }
   }
 
   
-  @media only screen and (min-width: 902px) and (max-width: 1021px) {
-    .author-name,
+  @media only screen and (min-width: 760px) and (max-width: 1365px) {
     .project-title,
     .technologies-label {
-      font-size: 24px;
+      font-size: 21px;
     }
 
     .web-technologies-icon {
@@ -114,6 +114,10 @@
     
     .project-description {
       font-size: 16px;
+    }
+
+    .author-name {
+      font-size: 26px;
     }
   }
 
@@ -147,10 +151,18 @@
     }
   }
 
-  
-  @media only screen and (min-width: 1022px) {
+
+  @media only screen and (min-width: 1065px) {
+    .main,
+    .main.blur {
+      margin-left: auto;
+    }
+  }
+
+
+  @media only screen and (min-width: 1365px) {
     .author-name {
-      font-size: 28px;
+      font-size: 29px;
     }
   
     .web-technologies-icon {
@@ -161,20 +173,21 @@
     
     .project-title,
     .technologies-label {
-      font-size: 25px;
+      font-size: 24px;
     }
 
     .project-description,
     .github-repo,
-    .project-site {
+    .project-site,
+    .personal-item-title {
       font-size: 18px;
     }
-  }
 
+    .personal-item-link {
+      font-size: 16px;
+    }
 
-  @media only screen and (min-width: 1065px) {
-    .main,
-    .main.blur {
-      margin-left: auto;
+    .project-links {
+      margin-top: 4px;
     }
   }
