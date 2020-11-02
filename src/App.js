@@ -33,6 +33,12 @@ class App extends Component {
   }
 
   render() {
+    let slider = (
+      <ProjectsSlider
+        projects={data.projects}
+        pics={images}
+        closeMenu={this.closeMenu}
+      />)
     let mainView = this.state.menuHasClass ? "main blur" : "main";
     let menuMobile = this.state.menuHasClass
       ? "menu-mobile visible"
@@ -84,20 +90,13 @@ class App extends Component {
             </Switch>
             <MediaQuery query="(max-device-width: 973px)">
               <nav aria-label="Project slider" className={menuMobile}>
-                <ProjectsSlider
-                  projects={data.projects}
-                  pics={images}
-                  closeMenu={this.closeMenu}
-                />
+                {slider}
               </nav>
             </MediaQuery>
+
             <MediaQuery query="(min-device-width: 974px)">
               <nav aria-label="Project slider" className="menu">
-                <ProjectsSlider
-                  projects={data.projects}
-                  pics={images}
-                  closeMenu={this.closeMenu}
-                />
+                {slider}
               </nav>
             </MediaQuery>
           </div>
