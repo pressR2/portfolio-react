@@ -3,12 +3,33 @@ import { withRouter } from "react-router";
 import {Link} from "react-router-dom";
 
 class SlideLinkWithoutRouter extends React.Component {
+  constructor(props) {
+    super(props)
+    this.hoverOn = this.hoverOn.bind(this);
+    this.hoverOut = this.hoverOut.bind(this);
+  }
+
+  state = {
+    hoveringElem: false
+  };
+
+  hoverOn() {
+    this.setState({
+      hoveringElem: true
+    });
+  }
+
+  hoverOut() {
+    this.setState({
+      hoveringElem: false
+    });
+  }
    
   render() {
+    let hoverOn = this.hoverOn;
+    let hoverOut = this.hoverOut;
     const {location} = this.props;
     let pr = this.props;
-    let hoverOn = pr.hoverOn;
-    let hoverOut = pr.hoverOut;
     let closeMenu = pr.closeMenu;
     let projectPath = pr.project.image.substring(1, pr.project.image.length - 4);
     let imageUrl = pr.pics(pr.project.image);
@@ -18,27 +39,27 @@ class SlideLinkWithoutRouter extends React.Component {
       <Link to={projectPath} key={pr.project.image} className="link-wrapper">
         <img
           className={className}
-          src={pr.hoveringImage ? imageOnHoverURL : imageUrl}
+          src={this.state.hoveringElem ? imageOnHoverURL : imageUrl}
           alt={pr.project.description[0]}
           aria-label={`${pr.project.description[0]} ${pr.slideIndex + 1} of ${pr.projects.length}`}
 
-          onMouseOut={(function () {
-            return function () {
+          onMouseOut={(function() {
+            return function() {
               hoverOut();
             };
           })()}
 
-          onMouseOver={(function (projectOnHover) {
-            return function () {
-              hoverOn(projectOnHover);
+          onMouseOver={(function() {
+            return function() {
+              hoverOn();
             };
-          })(pr.project)}
+          })()}
 
-          onClick={(function (projectToApply) {
-            return function (event) {
+          onClick={(function() {
+            return function() {
               closeMenu();
             };
-          })(pr.project)}
+          })()}
         ></img>
       </Link>
     )
@@ -46,9 +67,7 @@ class SlideLinkWithoutRouter extends React.Component {
         let projectLinkDiv= (<div className={divClass} key={pr.SlideIndex}>{projectLink}</div>); 
         return pr.focusableLink ? projectLinkDiv : projectLink; 
   }
-
 }
 
 const SlideLink = withRouter(SlideLinkWithoutRouter);
 export default SlideLink;
-

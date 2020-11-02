@@ -5,19 +5,15 @@ import "slick-carousel/slick/slick-theme.css";
 import Chevron from "./Chevron.js";
 import SlideLink from "./SlideLinkWithoutRouter.js";
 
-
 class ProjectsSlider extends React.Component {
   constructor(props) {
     super(props);
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
-    this.hoverOn = this.hoverOn.bind(this);
-    this.hoverOut = this.hoverOut.bind(this);
   }
 
   state = {
     focusableProjectIndex: 0,
-    hoveringElem: {},
   };
 
   next() {
@@ -34,18 +30,6 @@ class ProjectsSlider extends React.Component {
       focusableProjectIndex: this.state.focusableProjectIndex === 0 ? this.props.projects.length : this.state.focusableProjectIndex - 1
     });
     this.fixFocus();
-  }
-
-  hoverOn(project) {
-    this.setState({
-      hoveringElem: project,
-    });
-  }
-
-  hoverOut() {
-    this.setState({
-      hoveringElem: {},
-    });
   }
 
   fixFocus() {
@@ -67,8 +51,6 @@ class ProjectsSlider extends React.Component {
 
   render() {
     let pr = this.props;
-    let hoverOn = this.hoverOn;
-    let hoverOut = this.hoverOut;
     var settings = {
       slidesToShow: 3,
       slidesToScroll: 1,
@@ -99,9 +81,6 @@ class ProjectsSlider extends React.Component {
                       pics={pr.pics}
                       key={index}
                       slideIndex={index}
-                      hoveringImage={project === this.state.hoveringElem}
-                      hoverOn={hoverOn}
-                      hoverOut={hoverOut}
                       closeMenu={pr.closeMenu}
                       projects={pr.projects}
                       focusableLink={index === this.state.focusableProjectIndex}>
