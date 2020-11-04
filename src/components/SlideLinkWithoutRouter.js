@@ -3,31 +3,24 @@ import { withRouter } from "react-router";
 import {Link} from "react-router-dom";
 
 class SlideLinkWithoutRouter extends React.Component {
-  constructor(props) {
-    super(props)
-    this.hoverOn = this.hoverOn.bind(this);
-    this.hoverOut = this.hoverOut.bind(this);
-  }
 
   state = {
     hoveringElem: false
   };
 
-  hoverOn() {
+  hoverOn = () => {
     this.setState({
       hoveringElem: true
     });
   }
 
-  hoverOut() {
+  hoverOut = () => {
     this.setState({
       hoveringElem: false
     });
   }
    
   render() {
-    let hoverOn = this.hoverOn;
-    let hoverOut = this.hoverOut;
     const {location} = this.props;
     let pr = this.props;
     let closeMenu = pr.closeMenu;
@@ -43,20 +36,20 @@ class SlideLinkWithoutRouter extends React.Component {
           alt={pr.project.description[0]}
           aria-label={`${pr.project.description[0]} ${pr.slideIndex + 1} of ${pr.projects.length}`}
 
-          onMouseOut={(function() {
-            return function() {
-              hoverOut();
+          onMouseOut={(() => {
+            return () => {
+              this.hoverOut();
             };
           })()}
 
-          onMouseOver={(function() {
-            return function() {
-              hoverOn();
+          onMouseOver={(() => {
+            return () => {
+              this.hoverOn();
             };
           })()}
 
-          onClick={(function() {
-            return function() {
+          onClick={(() => {
+            return () => {
               closeMenu();
             };
           })()}

@@ -46,12 +46,11 @@ class ProjectsDescription extends React.Component {
       webpageLink = null;
     }
 
-
     return (
       <div aria-label= {itemTitle} className="project-presentation">
         <div aria-label={itemWebTechnologies}>
          {technologiesLabel}
-          {this.props.webTechnologies.map(function (icons) {
+          {this.props.webTechnologies.map((icons) => {
             let iconText = icons.split("-")[1];
             return (
               <div className="web-technologies-icon" key={icons}>

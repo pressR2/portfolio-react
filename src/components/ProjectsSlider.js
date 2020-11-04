@@ -6,17 +6,12 @@ import Chevron from "./Chevron.js";
 import SlideLink from "./SlideLinkWithoutRouter.js";
 
 class ProjectsSlider extends React.Component {
-  constructor(props) {
-    super(props);
-    this.next = this.next.bind(this);
-    this.previous = this.previous.bind(this);
-  }
 
   state = {
     focusableProjectIndex: 0,
   };
 
-  next() {
+  next = () => {
     this.slider.slickNext();
     this.setState({
       focusableProjectIndex: (this.state.focusableProjectIndex + 1) % this.props.projects.length
@@ -24,7 +19,7 @@ class ProjectsSlider extends React.Component {
     this.fixFocus();
   }
 
-  previous() {
+  previous = () => {
     this.slider.slickPrev();
     this.setState({
       focusableProjectIndex: this.state.focusableProjectIndex === 0 ? this.props.projects.length : this.state.focusableProjectIndex - 1
@@ -75,7 +70,7 @@ class ProjectsSlider extends React.Component {
           <div aria-live="polite">
             <Slider ref={(c) => (this.slider = c)} {...settings}>
               {this.props.projects.map(
-                function (project, index) {
+                 (project, index) => {
                    return (<SlideLink
                       project={project}
                       pics={pr.pics}
@@ -85,7 +80,7 @@ class ProjectsSlider extends React.Component {
                       projects={pr.projects}
                       focusableLink={index === this.state.focusableProjectIndex}>
                     </SlideLink>)       
-                }.bind(this)
+                }
               )}
             </Slider>
           </div>

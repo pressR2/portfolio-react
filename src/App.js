@@ -14,21 +14,16 @@ import { Route, Redirect, Switch, HashRouter } from "react-router-dom";
 const images = require.context("../images", true);
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.menuHandling = this.menuHandling.bind(this);
-    this.closeMenu = this.closeMenu.bind(this);
-  }
 
   state = {
     menuHasClass: false,
   };
 
-  closeMenu() {
+  closeMenu = () => {
     this.setState({ menuHasClass: false });
   }
 
-  menuHandling() {
+  menuHandling = () => {
     this.setState({ menuHasClass: !this.state.menuHasClass });
   }
 
@@ -44,7 +39,7 @@ class App extends Component {
       ? "menu-mobile visible"
       : "menu-mobile";
 
-    const projectRoutes = data.projects.map(function (project, index) {
+    const projectRoutes = data.projects.map((project, index) => {
       let projectPath = project.image.substring(1, project.image.length - 4);
       let contentToDisplay = (
         <ProjectsPresentation selectVideo={project.video} />
