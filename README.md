@@ -20,3 +20,5 @@ This application shows my bio and projects I've made. The projects have a short 
 * [gh-pages](https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f)
 ### Link to site
 [pressr2.github.io](https://pressr2.github.io/)
+
+#Icons were taken from https://devicon.dev/ and www.flaticon.com.
